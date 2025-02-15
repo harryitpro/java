@@ -3,7 +3,8 @@ package datastructure.basic.array;
 import java.util.Arrays;
 
 /**
- * Store a collection of items of the same type
+ * Store a collection of items of the same type.
+ * fixed size.
  */
 public class Array {
 
@@ -34,6 +35,7 @@ public class Array {
     }
 
 
+    //access through index
     void access() {
         //Access Element at O(1) time, array[index]
         int[] intArray = {10, 20, 30};
@@ -54,6 +56,36 @@ public class Array {
         System.out.println(arr[1]); //40
     }
 
+    static int sum(int[] array) {
+        if (array == null || array.length == 0) {
+            throw new IllegalArgumentException("array is empty or null");
+        }
+        int sum = 0;
+        for (int value : array) {
+            sum = sum + value;
+        }
+        return sum;
+    }
+
+    static int max(int[] arr) {
+        //empty or null check
+        if (arr == null || arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty or null");
+        }
+
+        //init place-holder value to the first one
+        int max = arr[0];
+
+        //compare and compute
+        for (int value : arr) {
+            if (value > max) {
+                max = value;
+            }
+        }
+
+        //return value
+        return max;
+    }
 
     public static void main(String[] args) {
         Array arr = new Array();
@@ -68,5 +100,18 @@ public class Array {
 
         System.out.println("---arr.update()---");
         arr.update();
+
+        int[] intArr = {3, 1, 2, 5, 4};
+        int max = max(intArr);
+        System.out.println("max = " + max); //5
+
+        intArr = new int[]{1, 2, 3, 4, 5};
+        int sum = sum(intArr);
+        System.out.println("sum(arr) = " + sum(intArr));//15
+
+        int[] emptyArr = new int[]{};
+        System.out.println("sum(emptyArr) = " + sum(emptyArr)); //0
     }
+
+
 }
