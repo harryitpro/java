@@ -8,6 +8,10 @@ import java.util.stream.Stream;
 /**
  * Arrays factory methods.
  * Arrays.toString() : list each element in string.
+ * Arrays.sort()
+ * Arrays.binarySearch()
+ * Arrays.asList()
+ * Arrays.stream()
  */
 public class ArraysUtilityClass {
 
@@ -55,8 +59,32 @@ public class ArraysUtilityClass {
         System.out.println(fruitsWithPrefix.toString()); // A_Apple, B_Banana, C_Cherry]
     }
 
+    //copy subarray
+    //contiguous subarray of size k
+
+    /**
+     * 1: get all sub-arrays and calculate sum: Arrays.copyOfRange():  Time Complexity: K * n.length
+     * 2, get max of sum.
+     */
+    static void subArray() {
+        int[] arr = {10, 20, 30, 40, 50, 60};
+        int k = 3;
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i <= arr.length - k; i++) {
+            int[] subArr = Arrays.copyOfRange(arr, i, i + k);
+            int sum = Arrays.stream(subArr).sum();
+            if (sum > max) {
+                max = sum;
+            }
+            System.out.println(Arrays.toString(subArr));
+        }
+        System.out.println("max sum = " + max);
+    }
+
     public static void main(String[] args) {
         binarySearch();
         stream();
+        System.out.println("-------subArray()------");
+        subArray();
     }
 }
