@@ -1,4 +1,4 @@
-package datastructure.basic.array;
+package datastructure.linear.array;
 
 import java.util.Arrays;
 import java.util.List;

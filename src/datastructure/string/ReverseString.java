@@ -1,4 +1,4 @@
-package datastructure.basic.string;
+package datastructure.string;
 
 import java.lang.StringBuilder;
 

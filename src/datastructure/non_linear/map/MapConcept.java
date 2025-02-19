@@ -1,10 +1,7 @@
-package datastructure.basic.map;
+package datastructure.non_linear.map;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.lang.Integer;
-import java.util.Map;
 
 /**
  * Common Methods in Map API
@@ -33,7 +30,7 @@ public class MapConcept {
         fruitPrice.put("Apple", 2);
         fruitPrice.put("Banana", 3);
         fruitPrice.put("Cherry", 1);
-
+        Set<Map.Entry<String, Integer>>  entrySet = fruitPrice.entrySet();
         //Using Map.of() (Java 9+), factory method to build an immutable Map instance.
         Map<String, Integer> fruitPriceMapOf = Map.of("Apple", 2, "Banana", 3, "Cherry", 1);
     }

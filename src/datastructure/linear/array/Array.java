@@ -1,4 +1,4 @@
-package datastructure.basic.array;
+package datastructure.linear.array;
 
 import java.util.Arrays;
 
@@ -17,9 +17,16 @@ public class Array {
         String[] days = {"Sunday", "Monday", "Tuesday", "Wednesday"};
         System.out.println("days = " + Arrays.toString(days)); //[Sunday, Monday, Tuesday, Wednesday]
 
-        //declare and instantiate
+        //declare and instantiate using literals
         char[] chars = new char[]{'a', 'b', 'c'};
         System.out.println("chars = " + Arrays.toString(chars)); //[a, b, c]
+
+        //declare with give size, and update
+        int[] intArrWithCapacity = new int[3];
+        intArrWithCapacity[0] = 1;
+        intArrWithCapacity[1] = 2;
+        intArrWithCapacity[2] = 3;
+        System.out.println(Arrays.toString(intArrWithCapacity));
 
         //2 -dimensional array. row/columns are inferred
         int[][] matrix = {
@@ -129,9 +136,9 @@ public class Array {
 
         int[] emptyArr = new int[]{};
         // Exception in thread "main" java.lang.IllegalArgumentException: array is empty or null
-        try{
+        try {
             System.out.println("sum(emptyArr) = " + sum(emptyArr));
-        }catch(Exception e){
+        } catch (Exception e) {
             //skip exception
         }
     }
