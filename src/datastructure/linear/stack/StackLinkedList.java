@@ -17,12 +17,14 @@ class StackLinkedList {
         this.top = null;
     }
 
+    //O(1) time complexity
     public void push(int data) {
         Node newNode = new Node(data);
         newNode.next = top;
         top = newNode;
     }
 
+    //O(1) time complexity
     public int pop() {
         if (isEmpty()) {
             throw new RuntimeException("Stack Underflow");

@@ -1,10 +1,8 @@
-package datastructure.linear.linkedlist;
+package datastructure.fundamentalunit;
 
 
 /**
  * implement SinglyLinkedList.
- *
- * How to locate the Last node: if current node's next() is null. while(current.next !=null)
  */
 class SinglyLinkedList {
     // Node class (inner class)

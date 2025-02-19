@@ -1,4 +1,4 @@
-package datastructure;
+package datastructure.fundamentalunit;
 
 /**
  * Node (Tree & Linked List)

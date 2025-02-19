@@ -18,6 +18,7 @@ class StackArray {
         this.top = -1;
     }
 
+    //O(1) time complexity
     public void push(int item) {
         if (isFull()) {
             throw new RuntimeException("Stack Overflow");
@@ -25,6 +26,7 @@ class StackArray {
         stack[++top] = item;
     }
 
+    //O(1) time complexity
     public int pop() {
         if (isEmpty()) {
             throw new RuntimeException("Stack Underflow");
@@ -32,6 +34,7 @@ class StackArray {
         return stack[top--];
     }
 
+    //O(1) time complexity
     public int peek() {
         if (isEmpty()) {
             throw new RuntimeException("Stack is empty");
