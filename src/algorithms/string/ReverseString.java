@@ -1,4 +1,4 @@
-package datastructure.string;
+package algorithms.string;
 
 import java.lang.StringBuilder;
 

@@ -1,4 +1,4 @@
-package datastructure.non_linear.map.graph;
+package datastructure.graph;
 
 import java.util.*;
 

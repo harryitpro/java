@@ -1,4 +1,4 @@
-package datastructure.linear.stack;
+package datastructure.stack;
 
 class StackLinkedList {
     private static class Node {

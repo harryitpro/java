@@ -1,4 +1,4 @@
-package datastructure.fundamentalunit;
+package datastructure.linkedlist;
 
 
 /**

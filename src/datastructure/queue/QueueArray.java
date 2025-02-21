@@ -1,4 +1,4 @@
-package datastructure.linear.queue;
+package datastructure.queue;
 
 /**
  * Queue:

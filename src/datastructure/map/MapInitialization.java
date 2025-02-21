@@ -1,4 +1,4 @@
-package datastructure.non_linear.map.hashmap;
+package datastructure.map;
 
 import java.util.HashMap;
 import java.util.Map;

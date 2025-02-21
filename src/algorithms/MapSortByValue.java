@@ -1,4 +1,4 @@
-package datastructure.non_linear.map;
+package algorithms;
 
 import java.util.*;
 import java.lang.Integer;
@@ -18,23 +18,7 @@ import java.lang.Integer;
  * <p>
  * Map Stream?
  */
-public class MapConcept {
-
-
-    /**
-     * Using Map.of() (Java 9+), factory method to build an immutable Map instance.
-     */
-    static void init() {
-        //Declare and put. Mutable Map.
-        Map<String, Integer> fruitPrice = new HashMap<>();
-        fruitPrice.put("Apple", 2);
-        fruitPrice.put("Banana", 3);
-        fruitPrice.put("Cherry", 1);
-        Set<Map.Entry<String, Integer>>  entrySet = fruitPrice.entrySet();
-        //Using Map.of() (Java 9+), factory method to build an immutable Map instance.
-        Map<String, Integer> fruitPriceMapOf = Map.of("Apple", 2, "Banana", 3, "Cherry", 1);
-    }
-
+public class MapSortByValue {
     static void sortMapByValue() {
         Map<String, Integer> fruitPrice = new HashMap<>();
         fruitPrice.put("Apple", 2);
@@ -46,7 +30,5 @@ public class MapConcept {
 
         //how to sort a list?
         list.sort(Map.Entry.comparingByValue());
-
-
     }
 }

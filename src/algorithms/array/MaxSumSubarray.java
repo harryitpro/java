@@ -1,4 +1,4 @@
-package algorithms.slidingwindow;
+package algorithms.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;

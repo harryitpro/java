@@ -1,4 +1,4 @@
-package datastructure.fundamentalunit;
+package datastructure.array;
 
 import java.util.Arrays;
 
@@ -50,23 +50,12 @@ public class Array {
         System.out.println("intArray = " + intArray[1]); //20
     }
 
+
     void iterate() {
         int[] intArray = {10, 20, 30};
-        for (int value : intArray) {
-            System.out.println(value); //20
-        }
-
         //index start from 0, the last index is length-1
         for (int i = 0; i < intArray.length; i++) {
             System.out.println(intArray[i]); //20
-        }
-    }
-
-    void traverseWithRange() {
-        int[] arr = {10, 20, 30, 40, 50, 60, 70};  //7 elements
-        //traverse from start to a range of 4: start = 0; length= 4.  (startIndex, startIndex+range-1)
-        for (int i = 0; i < 4; i++) {
-            System.out.println(arr[i]);
         }
     }
 
@@ -77,36 +66,6 @@ public class Array {
         System.out.println(arr[1]); //40
     }
 
-    static int sum(int[] array) {
-        if (array == null || array.length == 0) {
-            throw new IllegalArgumentException("array is empty or null");
-        }
-        int sum = 0;
-        for (int value : array) {
-            sum = sum + value;
-        }
-        return sum;
-    }
-
-    static int max(int[] arr) {
-        //empty or null check
-        if (arr == null || arr.length == 0) {
-            throw new IllegalArgumentException("Array is empty or null");
-        }
-
-        //init place-holder value to the first one
-        int max = arr[0];
-
-        //compare and compute
-        for (int value : arr) {
-            if (value > max) {
-                max = value;
-            }
-        }
-
-        //return value
-        return max;
-    }
 
     public static void main(String[] args) {
         Array arr = new Array();
@@ -122,24 +81,5 @@ public class Array {
         System.out.println("---arr.update()---");
         arr.update();
 
-        System.out.println("---arr.traverseWithRange()---");
-        arr.traverseWithRange();
-
-        System.out.println("---max()---");
-        int[] intArr = {3, 1, 2, 5, 4};
-        int max = max(intArr);
-        System.out.println("max = " + max); //5
-
-        intArr = new int[]{1, 2, 3, 4, 5};
-        int sum = sum(intArr);
-        System.out.println("sum(arr) = " + sum(intArr));//15
-
-        int[] emptyArr = new int[]{};
-        // Exception in thread "main" java.lang.IllegalArgumentException: array is empty or null
-        try {
-            System.out.println("sum(emptyArr) = " + sum(emptyArr));
-        } catch (Exception e) {
-            //skip exception
-        }
     }
 }

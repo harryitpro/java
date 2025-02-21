@@ -1,4 +1,4 @@
-package datastructure.linear.stack;
+package datastructure.stack;
 
 /**
  * implement Stack<Integer> using Array. Following LIFO
