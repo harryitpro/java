@@ -3,39 +3,44 @@ package datastructure.graph;
 import java.util.*;
 
 /**
- * represent a graph using Map, to contain vertex(vertices and edges)
- * Key: individual vertex
- * Value: List<Integer>, all the destination vertices, or connected vertices.
- * <p>
- * graph like below
- *   1
- * /  \
- * 2     3
- * /  \     \
- * 4   5      6
- * <p>
- * <p>
- * expected printing result:
- * 1 -> 2, 3
- * 2 -> 4, 5
- * 3 -> 6
+ * Uses a HashMap or ArrayList to store edges.
+ * More memory-efficient than a matrix.
+ * Good for: Sparse graphs.
  */
 public class Graph {
-    private Map<Integer, List<Integer>> adjMap = new HashMap<>();
+    private Map<Integer, List<Integer>> adjList;
 
+    public Graph() {
+        adjList = new HashMap<>();
+    }
+
+    public void addVertex(int vertex) {
+        adjList.putIfAbsent(vertex, new ArrayList<>());
+    }
+
+    //directed graph
     public void addEdge(Integer source, Integer dest) {
-        adjMap.putIfAbsent(source, new ArrayList<>());
-        adjMap.get(source).add(dest);
+        adjList.get(source).add(dest);
+    }
+
+    public void printGraph() {
+        for (var entry : adjList.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
     }
 
     public static void main(String[] args) {
         Graph graph = new Graph();
-        graph.addEdge(1, 2);
-        graph.addEdge(1, 3);
-        graph.addEdge(2, 4);
-        graph.addEdge(2, 5);
-        graph.addEdge(3, 6);
-        //question: should we add empty edge for vertex?
+        graph.addVertex(0);
+        graph.addVertex(1);
+        graph.addVertex(2);
+        graph.addVertex(3);
 
+        graph.addEdge(0, 1);
+        graph.addEdge(0, 2);
+        graph.addEdge(1, 2);
+        graph.addEdge(2, 3);
+
+        graph.printGraph();
     }
 }
