@@ -1,9 +1,9 @@
-package datastructure.array.sortiing;
+package algorithms.sortiing;
 
 import java.util.Arrays;
 
 /**
- * Bubble Sort is a simple sorting algorithm that repeatedly swaps adjacent elements if they are in the wrong order. It continues until the entire array is sorted.
+ * repeatedly swaps adjacent elements if they are in the wrong order. It continues until the entire array is sorted.
  *
  * How Bubble Sort Works
  * Compare adjacent elements.
