@@ -1,4 +1,4 @@
-package algorithms.array.sortiing;
+package datastructure.array.sortiing;
 
 import java.util.Arrays;
 
