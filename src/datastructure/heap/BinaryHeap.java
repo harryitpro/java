@@ -34,12 +34,13 @@ class BinaryHeap {
     }
 
     // Insert a new value into the heap
-    public void insert(int value) {
-        if (size == capacity) {
-            System.out.println("Heap is full!");
-            return;
-        }
+    //add to the end of the array.
 
+    /**
+     * add to the end of the array.
+     * @param value
+     */
+    public void insert(int value) {
         heap[size] = value;
         int current = size;
         size++;

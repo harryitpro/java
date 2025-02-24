@@ -53,6 +53,7 @@ public class MergeSort {
         int[] arr = {38, 27, 43, 3, 9, 82, 10};
         System.out.println("Original array: " + Arrays.toString(arr));
 
+
         mergeSort(arr, 0, arr.length - 1);
 
         System.out.println("Sorted array: " + Arrays.toString(arr));

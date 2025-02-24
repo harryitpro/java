@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.map;
 
 import java.util.*;
 import java.lang.Integer;
@@ -16,7 +16,7 @@ import java.lang.Integer;
  * entrySet()	Returns all key-value pairs as a Set<Map.Entry<K,V>>.
  * forEach(BiConsumer<K,V>)	Iterates through entries (Java 8+).
  * <p>
- * Map Stream?
+ * Map Stream
  */
 public class MapSortByValue {
     static void sortMapByValue() {
@@ -28,7 +28,6 @@ public class MapSortByValue {
         //sort fruit by price. put sorted map into LinkedHashMap, which maintain the order of insertion
         List<Map.Entry<String, Integer>> list = new ArrayList<>(fruitPrice.entrySet());
 
-        //how to sort a list?
         list.sort(Map.Entry.comparingByValue());
     }
 }
