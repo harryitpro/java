@@ -1,9 +1,28 @@
 package algorithms.string;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 
 public class Permutation {
+    //a permutation means 2 words should have the same character set and frequency
+
+    /**
+     * solution: sort a word using nlog(n) time. both arrays should be identical after sorting.
+     * Similar questions: anagram, permutations...
+     */
+    static boolean isPermutation(String word1, String word2) {
+        if (word1.length() != word2.length()) {
+            return false;
+        }
+        char[] word1chars = word1.toCharArray();
+        char[] word2chars = word2.toCharArray();
+        Arrays.sort(word1chars);
+        Arrays.sort(word2chars);
+
+        return Arrays.equals(word1chars,word2chars);
+    }
+
     private static List<String> generatePermutations(String s) {
         if (s.isEmpty()) {
             throw new RuntimeException("string is empty");
@@ -35,8 +54,8 @@ public class Permutation {
     }
 
     public static void main(String[] args) {
-        List<String> perms = generatePermutations("abc");
-        perms.stream().forEach(System.out::println);
+//        List<String> perms = generatePermutations("abc");
+//        perms.stream().forEach(System.out::println);
+        System.out.println(isPermutation("abc", "bac"));
     }
-
 }
