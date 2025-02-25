@@ -23,6 +23,24 @@ public class Permutation {
         return Arrays.equals(word1chars,word2chars);
     }
 
+    //linear time
+    public static boolean isPermutationCharFrequency(String s1, String s2) {
+        if (s1.length() != s2.length()) return false;
+
+        int[] count = new int[256]; // Assuming ASCII character set
+
+        for (char c : s1.toCharArray()) {
+            count[c]++; // Increment character count
+        }
+
+        for (char c : s2.toCharArray()) {
+            count[c]--; // Decrement character count
+            if (count[c] < 0) return false; // More occurrences in s2
+        }
+
+        return true;
+    }
+
     private static List<String> generatePermutations(String s) {
         if (s.isEmpty()) {
             throw new RuntimeException("string is empty");
