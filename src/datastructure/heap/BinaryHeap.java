@@ -38,6 +38,7 @@ class BinaryHeap {
 
     /**
      * add to the end of the array.
+     *
      * @param value
      */
     public void insert(int value) {
@@ -60,12 +61,13 @@ class BinaryHeap {
         int root = heap[0];
         heap[0] = heap[--size];
 
-        heapifyDown(0);
+        sink(0);
         return root;
     }
 
     // Heapify Down to maintain Min-Heap property
-    private void heapifyDown(int i) {
+    // recursively call sink() till the condition gets satisfied.
+    private void sink(int i) {
         int left = leftChild(i);
         int right = rightChild(i);
         int smallest = i;
@@ -75,7 +77,7 @@ class BinaryHeap {
 
         if (smallest != i) {
             swap(i, smallest);
-            heapifyDown(smallest);
+            sink(smallest);
         }
     }
 
