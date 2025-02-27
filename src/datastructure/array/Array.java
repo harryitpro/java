@@ -11,8 +11,8 @@ public class Array {
 
     void init() {
         //initialization using literal
-        int[] intArr = {1, 2, 3, 4, 5};
-        System.out.println("intArr = " + Arrays.toString(intArr)); //[1, 2, 3, 4, 5]
+        int[] arr = {1, 2, 3, 4, 5};
+        System.out.println("arr = " + Arrays.toString(arr)); //[1, 2, 3, 4, 5]
 
         String[] days = {"Sunday", "Monday", "Tuesday", "Wednesday"};
         System.out.println("days = " + Arrays.toString(days)); //[Sunday, Monday, Tuesday, Wednesday]
@@ -22,11 +22,11 @@ public class Array {
         System.out.println("chars = " + Arrays.toString(chars)); //[a, b, c]
 
         //declare with give size, and update
-        int[] intArrWithCapacity = new int[3];
-        intArrWithCapacity[0] = 1;
-        intArrWithCapacity[1] = 2;
-        intArrWithCapacity[2] = 3;
-        System.out.println(Arrays.toString(intArrWithCapacity));
+        int[] arrWithCapacity = new int[3];
+        arrWithCapacity[0] = 1;
+        arrWithCapacity[1] = 2;
+        arrWithCapacity[2] = 3;
+        System.out.println(Arrays.toString(arrWithCapacity));
 
         //2 -dimensional array. row/columns are inferred
         int[][] matrix = {
@@ -46,16 +46,16 @@ public class Array {
     //access through index
     void access() {
         //Access Element at O(1) time, array[index]
-        int[] intArray = {10, 20, 30};
-        System.out.println("intArray = " + intArray[1]); //20
+        int[] array = {10, 20, 30};
+        System.out.println("array = " + array[1]); //20
     }
 
 
     void iterate() {
-        int[] intArray = {10, 20, 30};
+        int[] array = {10, 20, 30};
         //index start from 0, the last index is length-1
-        for (int i = 0; i < intArray.length; i++) {
-            System.out.println(intArray[i]); //20
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]); //20
         }
     }
 
@@ -66,6 +66,13 @@ public class Array {
         System.out.println(arr[1]); //40
     }
 
+    //basic swap operation
+    void swap(int i, int j) {
+        int[] arr = {10, 20, 30};
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 
     public static void main(String[] args) {
         Array arr = new Array();

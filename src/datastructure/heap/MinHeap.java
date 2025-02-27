@@ -37,14 +37,29 @@ public class MinHeap {
         return 2 * index + 2;
     }
 
-    // Swap two elements in the heap
-    private void swap(int i, int j) {
-        int temp = heap[i];
-        heap[i] = heap[j];
-        heap[j] = temp;
+    // Check if heap is empty
+    public boolean isEmpty() {
+        return size == 0;
     }
 
-    // Heapify up (used after insertion)
+    // Get current size of heap
+    public int getSize() {
+        return size;
+    }
+
+    // offer a new element
+    public void offer(int value) {
+        if (size == capacity) {
+            throw new IllegalStateException("Heap is full");
+        }
+
+        heap[size] = value;
+        heapifyUp(size);
+        size++;
+    }
+
+    // Heapify up (used after offerion)
+    //swim
     private void heapifyUp(int index) {
         while (index > 0) {
             int parent = getParent(index);
@@ -57,35 +72,11 @@ public class MinHeap {
         }
     }
 
-    // Heapify down (used after deletion)
-    private void heapifyDown(int index) {
-        int minIndex = index;
-        int leftChild = getLeftChild(index);
-        int rightChild = getRightChild(index);
-
-        if (leftChild < size && heap[leftChild] < heap[minIndex]) {
-            minIndex = leftChild;
-        }
-
-        if (rightChild < size && heap[rightChild] < heap[minIndex]) {
-            minIndex = rightChild;
-        }
-
-        if (minIndex != index) {
-            swap(index, minIndex);
-            heapifyDown(minIndex);
-        }
-    }
-
-    // Insert a new element
-    public void insert(int value) {
-        if (size == capacity) {
-            throw new IllegalStateException("Heap is full");
-        }
-
-        heap[size] = value;
-        heapifyUp(size);
-        size++;
+    // Swap two elements in the heap
+    private void swap(int i, int j) {
+        int temp = heap[i];
+        heap[i] = heap[j];
+        heap[j] = temp;
     }
 
     // Remove and return the minimum element
@@ -105,39 +96,43 @@ public class MinHeap {
         return min;
     }
 
-    // Get minimum element without removing it
-    public int peek() {
-        if (size == 0) {
-            throw new IllegalStateException("Heap is empty");
+    // Heapify down (used after deletion)
+    private void heapifyDown(int index) {
+        int minIndex = index;
+        int leftChild = getLeftChild(index);
+        int rightChild = getRightChild(index);
+
+        if (leftChild < size && heap[leftChild] < heap[minIndex]) {
+            minIndex = leftChild;
+        } else if (rightChild < size && heap[rightChild] < heap[minIndex]) {
+            minIndex = rightChild;
         }
-        return heap[0];
-    }
 
-    // Check if heap is empty
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    // Get current size of heap
-    public int getSize() {
-        return size;
+        //base condition.
+        if (minIndex == index) {
+            return;
+        }
+        //otherwise swap.
+        swap(index, minIndex);
+        //go to subtree, continue sink
+        heapifyDown(minIndex);
     }
 
     // Main method to test the implementation
     public static void main(String[] args) {
         MinHeap minHeap = new MinHeap(10);
 
-        // Insert some values
-        minHeap.insert(5);
-        minHeap.insert(3);
-        minHeap.insert(7);
-        minHeap.insert(1);
-        minHeap.insert(9);
+        // insert some values
+        minHeap.offer(5);
+        minHeap.offer(3);
+        minHeap.offer(7);
+        minHeap.offer(1);
+        minHeap.offer(9);
         System.out.println(Arrays.toString(minHeap.heap));
 
         // Print minimum elements one by one
         while (!minHeap.isEmpty()) {
-            System.out.print(minHeap.extractMin() +" ");
+            System.out.print(minHeap.extractMin() + " ");
         }
     }
 }

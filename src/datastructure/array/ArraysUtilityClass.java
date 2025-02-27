@@ -15,11 +15,18 @@ import java.util.stream.Stream;
  */
 public class ArraysUtilityClass {
 
-    //sorting array
+    //sorting array -- very important.
     static void sort() {
         int[] arr = {2, 1, 3, 5, 4};
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr)); //[1, 2, 3, 4, 5]
+
+        String s = "String";  //[S, t, r, i, n, g]
+        char[] chars = s.toCharArray();
+        Arrays.sort(chars);
+        System.out.println(Arrays.toString(chars)); //[S, g, i, n, r, t]
+
+        System.out.println(String.valueOf(chars)); //Sginrt
     }
 
     //binarySearch on sorted array
@@ -82,6 +89,7 @@ public class ArraysUtilityClass {
     }
 
     public static void main(String[] args) {
+        sort();
         binarySearch();
         stream();
         System.out.println("-------subArray()------");
