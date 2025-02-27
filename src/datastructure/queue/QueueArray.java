@@ -7,14 +7,14 @@ package datastructure.queue;
  * operation: insert, delete,search.
  */
 class QueueArray {
-    private int arr[];
+    private int[] queue;
+    private int capacity;
     private int front, rear;
     private int size;  // verify whether a queue is full or empty
-    private int capacity;
 
     public QueueArray(int capacity) {
         this.capacity = capacity;
-        arr = new int[capacity];
+        queue = new int[capacity];
         front = 0;
         rear = -1;
         size = 0;
@@ -26,7 +26,7 @@ class QueueArray {
             throw new RuntimeException("Queue Overflow");
         }
         rear = (++rear) % capacity; // Circular increment, to re-use space from front.
-        arr[rear] = data;
+        queue[rear] = data;
         size++;
     }
 
@@ -35,7 +35,7 @@ class QueueArray {
         if (isEmpty()) {
             throw new RuntimeException("Queue Underflow");
         }
-        int data = arr[front];
+        int data = queue[front];
         front = (front + 1) % capacity; // Circular increment
         size--;
         return data;
@@ -49,7 +49,7 @@ class QueueArray {
         }
         System.out.print("Queue: ");
         for (int i = 0; i < size; i++) {
-            System.out.print(arr[(front + i) % capacity] + " ");
+            System.out.print(queue[(front + i) % capacity] + " ");
         }
         System.out.println();
     }

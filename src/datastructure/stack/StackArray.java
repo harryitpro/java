@@ -8,10 +8,9 @@ package datastructure.stack;
  * peek(): return the top one without remove.
  */
 class StackArray {
+    private int capacity;
     private int[] stack;
     private int top;
-    private int capacity;
-
     public StackArray(int size) {
         this.capacity = size;
         this.stack = new int[size];
