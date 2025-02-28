@@ -80,7 +80,7 @@ public class MinHeap {
     }
 
     // Remove and return the minimum element
-    public int extractMin() {
+    public int poll() {
         if (size == 0) {
             throw new IllegalStateException("Heap is empty");
         }
@@ -132,7 +132,7 @@ public class MinHeap {
 
         // Print minimum elements one by one
         while (!minHeap.isEmpty()) {
-            System.out.print(minHeap.extractMin() + " ");
+            System.out.print(minHeap.poll() + " ");
         }
     }
 }
