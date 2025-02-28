@@ -12,14 +12,16 @@ import java.util.*;
  */
 public class MinHeap {
     private int[] heap;
-    private int size;
     private int capacity;
+    private int rear;
+    private int size;
 
     // Constructor
     public MinHeap(int capacity) {
         this.capacity = capacity;
-        this.size = 0;
         this.heap = new int[capacity];
+        this.rear = -1;
+        this.size = 0;
     }
 
     // Get parent index
@@ -53,8 +55,8 @@ public class MinHeap {
             throw new IllegalStateException("Heap is full");
         }
 
-        heap[size] = value;
-        heapifyUp(size);
+        heap[++rear] = value;
+        heapifyUp(rear);
         size++;
     }
 
@@ -86,7 +88,7 @@ public class MinHeap {
         }
 
         int min = heap[0];
-        heap[0] = heap[size - 1];
+        heap[0] = heap[rear--];
         size--;
 
         if (size > 0) {
@@ -106,7 +108,7 @@ public class MinHeap {
             minIndex = leftChild;
         } else if (rightChild < size && heap[rightChild] < heap[minIndex]) {
             minIndex = rightChild;
-        }else{
+        } else {
             return;
         }
 

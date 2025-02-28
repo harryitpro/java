@@ -5,12 +5,14 @@ import java.util.Arrays;
 public class MaxHeap {
     int[] heap;
     int capacity;
+    int rear;
     int size;
 
     public MaxHeap(int capacity) {
         heap = new int[capacity];
         this.capacity = capacity;
         size = 0;
+        rear = -1; //point to the last element
     }
 
     public int getParent(int i) {
@@ -48,8 +50,8 @@ public class MaxHeap {
         if (isFull()) {
             throw new RuntimeException("heap is overflow");
         }
-        heap[size] = data;
-        heapifyUp(size);
+        heap[++rear] = data;
+        heapifyUp(rear);
         size++;
     }
 
@@ -68,7 +70,7 @@ public class MaxHeap {
             return null;
         }
         int max = heap[0];
-        heap[0] = heap[size - 1];
+        heap[0] = heap[rear--];
         size--;
         if (!isEmpty()) {
             heapifyDown(0);
