@@ -69,6 +69,8 @@ public class Maps {
         hashMap.put(2, "Two");
         System.out.println("HashMap (Unordered): " + hashMap);  //{1=One, 2=Two, 3=Three}
 
+
+        //treeMap: red-black tree, order by key.
         Map<Integer, String> treeMap = new TreeMap<>();
         treeMap.put(3, "Three");
         treeMap.put(1, "One");

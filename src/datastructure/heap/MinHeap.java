@@ -106,13 +106,10 @@ public class MinHeap {
             minIndex = leftChild;
         } else if (rightChild < size && heap[rightChild] < heap[minIndex]) {
             minIndex = rightChild;
-        }
-
-        //base condition.
-        if (minIndex == index) {
+        }else{
             return;
         }
-        //otherwise swap.
+
         swap(index, minIndex);
         //go to subtree, continue sink
         heapifyDown(minIndex);
@@ -128,11 +125,11 @@ public class MinHeap {
         minHeap.offer(7);
         minHeap.offer(1);
         minHeap.offer(9);
-        System.out.println(Arrays.toString(minHeap.heap));
+        System.out.println(Arrays.toString(minHeap.heap)); //[1, 3, 7, 5, 9, 0, 0, 0, 0, 0]
 
         // Print minimum elements one by one
         while (!minHeap.isEmpty()) {
-            System.out.print(minHeap.poll() + " ");
+            System.out.print(minHeap.poll() + " ");  //1 3 5 7 9
         }
     }
 }

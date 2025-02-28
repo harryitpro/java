@@ -103,14 +103,7 @@ public class MaxHeap {
         System.out.println(Arrays.toString(maxHeap.heap)); //[10, 7, 5, 3, 1, 0, 0, 0, 0, 0]
 
         while (!maxHeap.isEmpty()) {
-            System.out.println(maxHeap.poll());
+            System.out.print(maxHeap.poll() + " ");  //10 7 3 5 1
         }
-        /**
-         * 10
-         * 7
-         * 3
-         * 5
-         * 1
-         */
     }
 }
