@@ -2,6 +2,10 @@ package datastructure.string;
 
 import java.util.*;
 
+/**
+ * key point:
+ * use while loop instead of for_loop, to manually control the index in the code blocks
+ */
 public class StringFlattener {
     private static void splitString(String s) {
         List<String> strings = new ArrayList<>();

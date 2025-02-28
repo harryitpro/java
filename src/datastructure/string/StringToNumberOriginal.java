@@ -6,7 +6,7 @@ import java.util.*;
  * convert string/substring to numbers:
  * split 12[abc]  different stacks
  */
-public class StringToNumber {
+public class StringToNumberOriginal {
     Deque<Integer> numStack = new ArrayDeque<>();
     Deque<String> stringStack = new ArrayDeque<>();
     String s = "12[abc]";

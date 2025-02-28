@@ -2,8 +2,20 @@ package datastructure.string;
 
 import java.util.Arrays;
 
-public class StringToChars {
-    //transform String to char[]
+/**
+ *List of Common Static Methods in String Class
+ * Method	Description
+ * String.valueOf(anyType)	Converts various data types to a String.
+ * String.valueOf(charArray, offset, length)	Converts part of a char array to a String.
+ * String.format(format, args...)	Returns a formatted string (like printf).
+ * String.join(delimiter, elements...)	Joins multiple strings with a delimiter.
+ * String.copyValueOf(charArray)	Converts a char array to a String.
+ * String.copyValueOf(charArray, offset, length)	Converts part of a char array to a String.
+ *
+ *
+ * Instance methods
+ */
+public class StringStaticMethods {
 
     /**
      * this transformation can be used for char array sorting.
