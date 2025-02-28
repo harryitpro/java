@@ -2,7 +2,7 @@ package datastructure.string;
 
 import java.util.Arrays;
 
-public class StringConcepts {
+public class StringToChars {
     //transform String to char[]
 
     /**
