@@ -33,13 +33,6 @@ public class CompleteBinaryTree {
         }
     }
 
-    //api:Insert, Traverse, Search
-    //insert: recursively call subtree insert if current node has both left and right filled in
-    public void insert(String data) {
-        Node node = new Node(data);
-        insert(root, node);
-    }
-
     //complete binary tree, the new node will be inserted by level
     //consult BFS
     private void insert(Node root, Node node) {

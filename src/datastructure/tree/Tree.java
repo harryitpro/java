@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 // a general Tree is represented by a root node.
+
+/**
+ * APIs:
+ */
 public class Tree {
     Node root;
 
