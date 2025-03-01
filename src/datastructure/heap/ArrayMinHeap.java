@@ -10,14 +10,14 @@ import java.util.*;
  * Min-Heap: Parent node is smaller than or equal to its children.
  * Max-Heap: Parent node is larger than or equal to its children.
  */
-public class MinHeap {
+public class ArrayMinHeap {
     private int[] heap;
     private int capacity;
     private int rear;
     private int size;
 
     // Constructor
-    public MinHeap(int capacity) {
+    public ArrayMinHeap(int capacity) {
         this.capacity = capacity;
         this.heap = new int[capacity];
         this.rear = -1;
@@ -119,7 +119,7 @@ public class MinHeap {
 
     // Main method to test the implementation
     public static void main(String[] args) {
-        MinHeap minHeap = new MinHeap(10);
+        ArrayMinHeap minHeap = new ArrayMinHeap(10);
 
         // insert some values
         minHeap.offer(5);

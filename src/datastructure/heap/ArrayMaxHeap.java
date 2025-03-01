@@ -2,13 +2,13 @@ package datastructure.heap;
 
 import java.util.Arrays;
 
-public class MaxHeap {
+public class ArrayMaxHeap {
     int[] heap;
     int capacity;
     int rear;
     int size;
 
-    public MaxHeap(int capacity) {
+    public ArrayMaxHeap(int capacity) {
         heap = new int[capacity];
         this.capacity = capacity;
         size = 0;
@@ -96,7 +96,7 @@ public class MaxHeap {
 
 
     public static void main(String[] args) {
-        MaxHeap maxHeap = new MaxHeap(10);
+        ArrayMaxHeap maxHeap = new ArrayMaxHeap(10);
         maxHeap.offer(1);
         maxHeap.offer(10);
         maxHeap.offer(5);
