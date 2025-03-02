@@ -16,17 +16,18 @@ package algorithms.linkedlist;
  * If there is a cycle, the fast pointer will eventually meet the slow pointer.
  * If fast reaches null, there is no cycle.
  */
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode(int val) {
-        this.val = val;
-        this.next = null;
-    }
-}
 
 public class CycleDetection {
+    static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int val) {
+            this.val = val;
+            this.next = null;
+        }
+    }
     public static boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {
             return false;

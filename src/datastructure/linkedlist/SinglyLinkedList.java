@@ -4,7 +4,7 @@ package datastructure.linkedlist;
 /**
  * implement SinglyLinkedList.
  */
-class SinglyLinkedList {
+public class SinglyLinkedList {
     // Node class (inner class)
     static class Node {
         int data;
@@ -16,9 +16,8 @@ class SinglyLinkedList {
         }
     }
 
-    private Node head; // Head of the list
+    private Node head;
 
-    // Insert at the end
     public void insert(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -46,17 +45,16 @@ class SinglyLinkedList {
         while (temp.next != null && temp.next.data != key) {
             temp = temp.next;
         }
+
         if (temp.next != null) {
             temp.next = temp.next.next;
         }
     }
 
-    // Print the list
+    // traverse
     public void display() {
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.data + " -> ");
-            temp = temp.next;
+        for (Node node = head; node != null; node = node.next) {
+            System.out.print(node.data + " -> ");
         }
         System.out.println("null");
     }
@@ -69,6 +67,8 @@ class SinglyLinkedList {
         list.display(); // Output: 10 -> 20 -> 30 -> null
 
         list.delete(20);
+        list.display(); // Output: 10 -> 30 -> null
+        list.delete(40);
         list.display(); // Output: 10 -> 30 -> null
     }
 }
