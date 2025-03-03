@@ -6,10 +6,10 @@ package datastructure.tree;
 
 /**
  * Let’s implement a Binary Search Tree (BST) validator in Java. A BST has a specific property: for any node, all values in the left subtree must be less than the node’s value, and all values in the right subtree must be greater than the node’s value. We’ll create a solution to check if a given binary tree satisfies this property.
- *
+ * <p>
  * Approach
  * To validate a BST:
- *
+ * <p>
  * Recursive Validation with Range:
  * For each node, maintain a valid range of values (min and max) that the node’s value must fall within.
  * The root can have any value (initially
@@ -29,26 +29,18 @@ package datastructure.tree;
  * An inorder traversal of a BST should yield values in ascending order. We could track the previous value and compare, but the range-based approach is more robust and handles duplicates appropriately.
  * Below is the Java implementation using the range-based recursive approach.
  */
-class TreeNode {
-    int val;
-    TreeNode left, right;
 
-    TreeNode(int x) {
-        val = x;
-    }
-}
 
 public class BSTValidator {
     public boolean isValidBST(TreeNode root) {
         return validate(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
-
     private boolean validate(TreeNode node, int min, int max) {
         //base condition
         if (node == null) {
             return true; // Base case
         }
-        System.out.println("processing node.value = "+ node.val);
+        System.out.println("processing node.value = " + node.val);
         if (node.val <= min || node.val >= max) {
             return false;
         }
@@ -63,6 +55,14 @@ public class BSTValidator {
         isValid = validate(node.right, node.val, max);
 
         return isValid;
+    }
+
+    static class TreeNode {
+        int val;
+        TreeNode left, right;
+        TreeNode(int x) {
+            val = x;
+        }
     }
 
     public static void main(String[] args) {
