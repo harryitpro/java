@@ -1,7 +1,5 @@
 package algorithms.array;
 
-import datastructure.array.Array;
-
 public class SumOfArrays {
     static int sum(int[] array) {
         if (array == null || array.length == 0) {

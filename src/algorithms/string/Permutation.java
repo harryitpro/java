@@ -74,6 +74,6 @@ public class Permutation {
     public static void main(String[] args) {
 //        List<String> perms = generatePermutations("abc");
 //        perms.stream().forEach(System.out::println);
-        System.out.println(isPermutation("abc", "bac"));
+        System.out.println(isPermutationCharFrequency("abc", "bac"));
     }
 }
