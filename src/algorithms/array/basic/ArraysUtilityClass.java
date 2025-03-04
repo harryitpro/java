@@ -1,4 +1,4 @@
-package algorithms.array.implementation;
+package algorithms.array.basic;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,13 +18,11 @@ public class ArraysUtilityClass {
     //sorting array -- very important.
     static void sort() {
         int[] arr = {2, 1, 3, 5, 4};
-        Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr)); //[1, 2, 3, 4, 5]
+        Arrays.sort(arr);  ////[1, 2, 3, 4, 5]
 
         String s = "String";  //[S, t, r, i, n, g]
         char[] chars = s.toCharArray();
-        Arrays.sort(chars);
-        System.out.println(Arrays.toString(chars)); //[S, g, i, n, r, t]
+        Arrays.sort(chars);  //[S, g, i, n, r, t]
 
         System.out.println(String.valueOf(chars)); //Sginrt
     }

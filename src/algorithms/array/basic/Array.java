@@ -1,4 +1,4 @@
-package algorithms.array.implementation;
+package algorithms.array.basic;
 
 import java.util.Arrays;
 
@@ -12,21 +12,15 @@ public class Array {
     void init() {
         //initialization using literal
         int[] arr = {1, 2, 3, 4, 5};
-        System.out.println("arr = " + Arrays.toString(arr)); //[1, 2, 3, 4, 5]
+
+        char[] chars = new char[]{'a', 'b', 'c'};
 
         String[] days = {"Sunday", "Monday", "Tuesday", "Wednesday"};
-        System.out.println("days = " + Arrays.toString(days)); //[Sunday, Monday, Tuesday, Wednesday]
 
-        //declare and instantiate using literals
-        char[] chars = new char[]{'a', 'b', 'c'};
-        System.out.println("chars = " + Arrays.toString(chars)); //[a, b, c]
-
-        //declare with give size, and update
         int[] arrWithCapacity = new int[3];
         arrWithCapacity[0] = 1;
         arrWithCapacity[1] = 2;
         arrWithCapacity[2] = 3;
-        System.out.println(Arrays.toString(arrWithCapacity));
 
         //2 -dimensional array. row/columns are inferred
         int[][] matrix = {
@@ -34,6 +28,12 @@ public class Array {
                 {2, 4, 6}
         };
 
+        System.out.println("arr = " + Arrays.toString(arr)); //[1, 2, 3, 4, 5]
+        System.out.println("days = " + Arrays.toString(days)); //[Sunday, Monday, Tuesday, Wednesday]
+        System.out.println("chars = " + Arrays.toString(chars)); //[a, b, c]
+        //declare and instantiate using literals
+        //declare with give size, and update
+        System.out.println(Arrays.toString(arrWithCapacity));
         System.out.println("matrix = ");
         for (int i = 0; i < matrix.length; i++) {
             System.out.println(Arrays.toString(matrix[i]));
@@ -42,36 +42,30 @@ public class Array {
         //[2, 4, 6]
     }
 
-
     //access through index
+    //Access Element at O(1) time, array[index]
     void access() {
-        //Access Element at O(1) time, array[index]
         int[] array = {10, 20, 30};
         System.out.println("array = " + array[1]); //20
     }
 
-
+    //index start from 0, the last index is length-1
     void iterate() {
         int[] array = {10, 20, 30};
-        //index start from 0, the last index is length-1
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]); //20
         }
     }
 
+    //Access Element at O(1) time
     void update() {
-        //Access Element at O(1) time
         int[] arr = {10, 20, 30};
         arr[1] = 40;
         System.out.println(arr[1]); //40
     }
 
-    //basic swap operation
-    void swap(int i, int j) {
-        int[] arr = {10, 20, 30};
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+    public void display(int[] arr) {
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void main(String[] args) {

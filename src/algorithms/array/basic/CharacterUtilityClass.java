@@ -1,4 +1,4 @@
-package algorithms.array.implementation;
+package algorithms.array.basic;
 
 /**
  * Built-in Character Class (Java Standard)
