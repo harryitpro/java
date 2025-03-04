@@ -6,6 +6,17 @@ import java.util.*;
  * Find duplicated numbers in an array
  */
 public class DuplicationCheck {
+    //time complexity: O(n)
+    static Set<Integer> findDuplicates_set(int[] arr) {
+        Set<Integer> duplicates = new HashSet<>();
+        Set<Integer> visited = new HashSet<>();
+        for (int i = 0; i < arr.length; i++) {
+            if (!visited.add(arr[i])) {
+                duplicates.add(arr[i]);
+            }
+        }
+        return duplicates;
+    }
 
     //time complexity: n(log(n))
     static Set<Integer> findDuplicates_sort(int[] arr) {
@@ -23,19 +34,6 @@ public class DuplicationCheck {
         }
         return duplicates;
     }
-
-    //time complexity: O(n)
-    static Set<Integer> findDuplicates_set(int[] arr) {
-        Set<Integer> duplicates = new HashSet<>();
-        Set<Integer> visited = new HashSet<>();
-        for (int i = 0; i < arr.length; i++) {
-            if (!visited.add(arr[i])) {
-                duplicates.add(arr[i]);
-            }
-        }
-        return duplicates;
-    }
-
 
     public static void main(String[] args) {
         int[] arr = {1, 4, 6, 9, 1, 3, 6, 4};
