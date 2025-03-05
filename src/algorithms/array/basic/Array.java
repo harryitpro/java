@@ -53,8 +53,20 @@ public class Array {
     void iterate() {
         int[] array = {10, 20, 30};
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]); //20
+            System.out.println(array[i]); //10.20
         }
+    }
+
+    //basic swap operation
+    void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    void iterateByStream() {
+        int[] arr = {10, 20, 30};
+        Arrays.stream(arr).forEach(System.out::println);
     }
 
     //Access Element at O(1) time
@@ -78,6 +90,9 @@ public class Array {
 
         System.out.println("---arr.iterate()---");
         arr.iterate();
+
+        System.out.println("---arr.iterateByStream()---");
+        arr.iterateByStream();
 
         System.out.println("---arr.update()---");
         arr.update();
