@@ -77,10 +77,10 @@ public class ReverseLinkedList {
         System.out.println("Original list:");
         ListNode.printList(head);
 
-        // Test iterative reversal
-        ListNode reversedIterative = solution.reverseListIterative(head);
-        System.out.println("Reversed list (iterative):");
-        ListNode.printList(reversedIterative);
+//        // Test iterative reversal
+//        ListNode reversedIterative = solution.reverseListIterative(head);
+//        System.out.println("Reversed list (iterative):");
+//        ListNode.printList(reversedIterative);
 
         // Create another list for recursive test
         head = ListNode.createList(arr);

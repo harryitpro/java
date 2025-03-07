@@ -20,6 +20,7 @@ public class StringInit {
         char[] chars = {'a', 'b'};
 
         String s1 = new String(chars); //ab
+        s1.length(); 
         String s2 = String.valueOf(chars); //ab
         System.out.println("s1.equals(s2) ? " + s1.equals(s2)); //true
     }
