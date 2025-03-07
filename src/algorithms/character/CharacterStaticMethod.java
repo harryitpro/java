@@ -1,4 +1,4 @@
-package algorithms.string.basic;
+package algorithms.character;
 
 /**
  * Built-in Character Class (Java Standard)
