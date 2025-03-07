@@ -1,91 +1,45 @@
 package algorithms.linkedlist;
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    // Helper method to create a linked list from an array
-    static ListNode createList(int[] arr) {
-        if (arr == null || arr.length == 0) return null;
-        ListNode head = new ListNode(arr[0]);
-        ListNode current = head;
-        for (int i = 1; i < arr.length; i++) {
-            current.next = new ListNode(arr[i]);
-            current = current.next;
-        }
-        return head;
-    }
-
-    // Helper method to print the list
-    static void printList(ListNode head) {
-        ListNode current = head;
-        while (current != null) {
-            System.out.print(current.val + " ");
-            current = current.next;
-        }
-        System.out.println();
-    }
-}
-
 public class ReverseLinkedList {
-    // Iterative approach - O(n) time, O(1) space
-    public ListNode reverseListIterative(ListNode head) {
-        ListNode prev = null;
-        ListNode current = head;
-        ListNode next = null;
+    static class Node {
+        int val;
+        Node next;
 
-        while (current != null) {
-            // Store next
-            next = current.next;
-            // Reverse current node's pointer
-            current.next = prev;
-            // Move prev and current one step forward
-            prev = current;
-            current = next;
+        Node(int val) {
+            this.val = val;
+            this.next = null;
         }
-        return prev; // new head
     }
 
-    // Recursive approach - O(n) time, O(n) space due to recursion stack
-    public ListNode reverseListRecursive(ListNode head) {
-        // Base cases: empty list or single node
+    static Node reverse(Node head) {
         if (head == null || head.next == null) {
             return head;
         }
-
-        // Recursive call
-        ListNode newHead = reverseListRecursive(head.next);
-
-        // Reverse the links
-        head.next.next = head;
-        head.next = null;
-
-        return newHead;
+        Node prev = null, current = head, next = current.next;
+        while (current != null) { //loop stops till current is null
+            //process reverse
+            next = current.next;
+            current.next = prev;
+            //move on
+            prev = current;
+            current = next;
+        }
+        return prev;
     }
 
     public static void main(String[] args) {
-        ReverseLinkedList solution = new ReverseLinkedList();
+        Node head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = new Node(5);
 
-        // Create test list: 1->2->3->4->5
-        int[] arr = {1, 2, 3, 4, 5};
-        ListNode head = ListNode.createList(arr);
-
-        System.out.println("Original list:");
-        ListNode.printList(head);
-
-//        // Test iterative reversal
-//        ListNode reversedIterative = solution.reverseListIterative(head);
-//        System.out.println("Reversed list (iterative):");
-//        ListNode.printList(reversedIterative);
-
-        // Create another list for recursive test
-        head = ListNode.createList(arr);
-        ListNode reversedRecursive = solution.reverseListRecursive(head);
-        System.out.println("Reversed list (recursive):");
-        ListNode.printList(reversedRecursive);
+        Node newHead = reverse(head);
+        //print reversed linked list
+        Node current = newHead;
+        while (current != null) {
+            System.out.print(current.val + " -> ");
+            current = current.next;
+        }
     }
 }

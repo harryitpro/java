@@ -59,6 +59,18 @@ public class SinglyLinkedList {
         System.out.println("null");
     }
 
+    // Helper method to create a linked list from an array
+    static Node createList(int[] arr) {
+        if (arr == null || arr.length == 0) return null;
+        Node head = new Node(arr[0]);
+        Node current = head;
+        for (int i = 1; i < arr.length; i++) {
+            current.next = new Node(arr[i]);
+            current = current.next;
+        }
+        return head;
+    }
+
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
         list.insert(10);

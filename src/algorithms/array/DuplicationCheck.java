@@ -3,7 +3,9 @@ package algorithms.array;
 import java.util.*;
 
 /**
- * Find duplicated numbers in an array
+ * Find duplicated numbers in an unsorted array:
+ * Hint:
+ * use Set to verify duplication: set's add(element) method returns false if the element already exists.
  */
 public class DuplicationCheck {
     //time complexity: O(n)
