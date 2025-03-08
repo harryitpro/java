@@ -1,4 +1,6 @@
-package algorithms.character;
+package algorithms.approach.frequencymap;
+
+import algorithms.approach.FrequencyMap;
 
 import java.util.Map;
 
@@ -9,8 +11,8 @@ import java.util.Map;
  */
 public class ValidateAnagram {
     static boolean isAnagram(String s1, String s2) {
-        Map<Character, Integer> s1CharCountMap = FrequencyCounter.getCharCountMap(s1);
-        Map<Character, Integer> s2CharCountMap = FrequencyCounter.getCharCountMap(s1);
+        Map<Character, Integer> s1CharCountMap = FrequencyMap.getCountMap(s1.toCharArray());
+        Map<Character, Integer> s2CharCountMap = FrequencyMap.getCountMap(s2.toCharArray());
         return s1CharCountMap.equals(s2CharCountMap);
     }
 

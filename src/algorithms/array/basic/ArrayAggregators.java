@@ -1,6 +1,6 @@
-package algorithms.array;
+package algorithms.array.basic;
 
-public class SumOfArrays {
+public class ArrayAggregators {
     static int sum(int[] array) {
         if (array == null || array.length == 0) {
             throw new IllegalArgumentException("array is empty or null");

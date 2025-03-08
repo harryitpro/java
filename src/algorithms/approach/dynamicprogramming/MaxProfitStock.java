@@ -1,4 +1,4 @@
-package algorithms.dynamicprogramming;
+package algorithms.approach.dynamicprogramming;
 
 /**
  * Best Time to Buy and Sell Stock (Max Profit)

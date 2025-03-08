@@ -1,4 +1,4 @@
-package algorithms.string;
+package algorithms.approach.slidingwindow;
 
 /**
  * Problem Statement:

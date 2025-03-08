@@ -1,4 +1,4 @@
-package algorithms.array;
+package algorithms.approach.frequencymap;
 
 import algorithms.approach.FrequencyMap;
 

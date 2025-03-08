@@ -1,4 +1,4 @@
-package algorithms.slidingwindow;
+package algorithms.approach.slidingwindow;
 
 import java.util.HashSet;
 

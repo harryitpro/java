@@ -1,4 +1,4 @@
-package algorithms.dynamicprogramming;
+package algorithms.approach.dynamicprogramming;
 
 /**
  * Longest Increasing Subsequence (LIS)

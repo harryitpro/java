@@ -1,4 +1,4 @@
-package algorithms.linkedlist;
+package algorithms.linkedlist.basic;
 
 public class ReverseLinkedList {
     static class Node {

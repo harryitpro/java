@@ -1,4 +1,4 @@
-package algorithms.stream;
+package algorithms.array.basic;
 
 import java.util.stream.*;
 import java.util.*;
