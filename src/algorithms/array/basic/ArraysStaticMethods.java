@@ -7,6 +7,7 @@ import java.util.stream.Stream;
 
 /**
  * Arrays factory methods.
+ * Arrays.equals(arr1,arr2)
  * Arrays.toString() : list each element in string.
  * Arrays.sort()
  * Arrays.binarySearch()

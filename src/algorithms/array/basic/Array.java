@@ -76,10 +76,6 @@ public class Array {
         System.out.println(arr[1]); //40
     }
 
-    public void display(int[] arr) {
-        System.out.println(Arrays.toString(arr));
-    }
-
     public static void main(String[] args) {
         Array arr = new Array();
         System.out.println("---arr.init()---");
@@ -97,5 +93,9 @@ public class Array {
         System.out.println("---arr.update()---");
         arr.update();
 
+        int[] arr1 = {1, 2, 3};
+        int[] arr2 = {1, 2, 3};
+        System.out.println("arr1.equals(arr2) = "+ arr1.equals(arr2)); //false
+        System.out.println("Arrays.equals(arr1,arr2) = "+ Arrays.equals(arr1,arr2)); //true
     }
 }
