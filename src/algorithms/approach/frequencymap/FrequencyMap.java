@@ -1,4 +1,4 @@
-package algorithms.approach;
+package algorithms.approach.frequencymap;
 
 import java.util.HashMap;
 import java.util.Map;

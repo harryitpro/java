@@ -1,7 +1,5 @@
 package algorithms.approach.frequencymap;
 
-import algorithms.approach.FrequencyMap;
-
 import java.util.Map;
 
 /**
