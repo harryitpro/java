@@ -9,6 +9,7 @@ import java.util.Arrays;
  */
 public class Array {
 
+    //C of CRUDE
     void init() {
         //initialization using literal
         int[] arr = {1, 2, 3, 4, 5};
@@ -64,6 +65,7 @@ public class Array {
         arr[j] = temp;
     }
 
+    //Iterate: R of CRUDE
     void iterateByStream() {
         int[] arr = {10, 20, 30};
         Arrays.stream(arr).forEach(System.out::println);
@@ -76,7 +78,7 @@ public class Array {
         System.out.println(arr[1]); //40
     }
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         Array arr = new Array();
         System.out.println("---arr.init()---");
         arr.init();
