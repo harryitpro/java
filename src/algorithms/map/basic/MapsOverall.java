@@ -62,7 +62,7 @@ package algorithms.map.basic;
 
 import java.util.*;
 
-public class Maps {
+public class MapsOverall {
     public static void main(String[] args) {
         Map<Integer, String> hashMap = new HashMap<>();
         hashMap.put(3, "Three");

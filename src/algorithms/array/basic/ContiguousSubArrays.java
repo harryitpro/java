@@ -1,4 +1,4 @@
-package algorithms.array;
+package algorithms.array.basic;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +23,18 @@ public class ContiguousSubArrays {
             for (int j = i; j < arr.length; j++) {
                 subArrays.add(Arrays.copyOfRange(arr, i, j + 1));
             }
+        }
+        return subArrays;
+    }
+
+    //fixed size sub arrays
+    static List<char[]> findAllContiguousSubArrays(char[] arr, int k) {
+        if (k > arr.length) {
+            throw new IllegalArgumentException("sub array size is bigger than original array size");
+        }
+        List<char[]> subArrays = new ArrayList<>();
+        for (int i = 0; i + k - 1 <= arr.length - 1; i++) {
+            subArrays.add(Arrays.copyOfRange(arr, i, i + k));
         }
         return subArrays;
     }

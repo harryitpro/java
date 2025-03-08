@@ -1,4 +1,4 @@
-package algorithms.map;
+package algorithms.map.basic;
 
 import java.util.*;
 import java.lang.Integer;
@@ -25,9 +25,9 @@ public class MapSortByValue {
         fruitPrice.put("Banana", 3);
         fruitPrice.put("Cherry", 1);
 
-        //sort fruit by price. put sorted map into LinkedHashMap, which maintain the order of insertion
         List<Map.Entry<String, Integer>> list = new ArrayList<>(fruitPrice.entrySet());
-
         list.sort(Map.Entry.comparingByValue());
+
+        //sort fruit by price. put sorted map into LinkedHashMap, which maintain the order of insertion
     }
 }

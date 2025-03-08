@@ -1,8 +1,8 @@
-package algorithms.array.basic;
+package algorithms.array;
 
 import java.util.Arrays;
 
-class Solution {
+class RemoveDuplicate {
     public static int removeDuplicates(int[] nums) {
         int left = 0;
         for (int right = left + 1; right < nums.length; right++) {

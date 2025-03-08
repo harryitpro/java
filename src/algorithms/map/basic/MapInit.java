@@ -18,7 +18,7 @@ import java.util.Map;
  * map.put("Banana", 20);
  * map.put("Orange", 30);
  */
-public class MapInitialization {
+public class MapInit {
 
     //Mutable init a map
     static void put() {
