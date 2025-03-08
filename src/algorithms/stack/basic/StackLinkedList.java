@@ -1,16 +1,6 @@
 package algorithms.stack.basic;
 
 class StackLinkedList {
-    private static class Node {
-        int data;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
-
     private Node top;
 
     public StackLinkedList() {
@@ -18,20 +8,11 @@ class StackLinkedList {
     }
 
     //O(1) time complexity
+    //replace top pointer to the new Node, keep existing top as tmp.
     public void push(int data) {
-        Node newNode = new Node(data);
-        newNode.next = top;
-        top = newNode;
-    }
-
-    //O(1) time complexity
-    public int pop() {
-        if (isEmpty()) {
-            throw new RuntimeException("Stack Underflow");
-        }
-        int data = top.data;
-        top = top.next;
-        return data;
+        Node tmp = top;
+        top = new Node(data);
+        top.next = tmp;
     }
 
     public int peek() {
@@ -41,8 +22,28 @@ class StackLinkedList {
         return top.data;
     }
 
+    //O(1) time complexity
+    public int pop() {
+        if (isEmpty()) {
+            throw new RuntimeException("Stack Underflow");
+        }
+        Node tmp = top;
+        top = top.next;
+        return tmp.data;
+    }
+
     public boolean isEmpty() {
         return top == null;
+    }
+
+    private static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
     }
 
     public static void main(String[] args) {

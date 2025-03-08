@@ -26,19 +26,19 @@ class StackArray {
     }
 
     //O(1) time complexity
-    public int pop() {
-        if (isEmpty()) {
-            throw new RuntimeException("Stack Underflow");
-        }
-        return stack[top--];
-    }
-
-    //O(1) time complexity
     public int peek() {
         if (isEmpty()) {
             throw new RuntimeException("Stack is empty");
         }
         return stack[top];
+    }
+
+    //O(1) time complexity
+    public int pop() {
+        if (isEmpty()) {
+            throw new RuntimeException("Stack Underflow");
+        }
+        return stack[top--];
     }
 
     public boolean isEmpty() {
