@@ -1,4 +1,4 @@
-package pattern.creational;
+package pattern.creational.factory;
 
 import java.util.Arrays;
 import java.util.List;

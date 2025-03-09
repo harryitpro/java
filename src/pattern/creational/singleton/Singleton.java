@@ -1,4 +1,4 @@
-package pattern.creational;
+package pattern.creational.singleton;
 
 /**
  * address only One instance is in use for the entire application

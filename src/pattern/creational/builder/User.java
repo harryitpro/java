@@ -1,4 +1,4 @@
-package pattern.creational;
+package pattern.creational.builder;
 
 // Class with many fields
 // use Builder pattern to build a User instance.

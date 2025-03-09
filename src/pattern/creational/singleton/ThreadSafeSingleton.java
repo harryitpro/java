@@ -1,4 +1,4 @@
-package pattern.creational;
+package pattern.creational.singleton;
 
 /**
  * This is the cleanest, fastest, and recommended approach.
