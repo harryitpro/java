@@ -6,10 +6,14 @@ import java.util.HashSet;
  * Problem Statement:
  * Given a string s, find the length of the longest substring without repeating characters.
  * <p>
+ * Hint: SlidingWindow + Set
+ * <p>
  * Approach: -- Variable width SlingingWindow
  * Use a HashSet to track characters in the current window.
  * Expand the window by adding new characters.
  * If a duplicate is found, shrink the window until it's unique again.
+// * set.remove(arr[left]
+// * left++
  */
 public class LongestSubstringWithoutRepeating {
     public static int lengthOfLongestSubstring(String s) {
