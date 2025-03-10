@@ -3,7 +3,7 @@ package algorithms.array;
 
 /**
  * To find the median from an unsorted array in Java, you need to:
- *
+ * <p>
  * Sort the array (O(n log n) time complexity).
  * Apply the median formula:
  * If the number of elements is odd, return the middle element.
@@ -30,6 +30,5 @@ public class MedianFinder {
      * Optimized Approach for Large Data (O(n) using QuickSelect)
      * If you only need the median without full sorting, you can use the QuickSelect algorithm (O(n) on average), which is a modified version of QuickSort that only finds the K-th smallest element.
      */
-
 
 }

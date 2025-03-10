@@ -6,6 +6,7 @@ import java.util.Arrays;
  * Store a collection of items of the same type.
  * fixed size.
  * index: starting from 0;  last index is 0 + offset. (the offset is array's length -1)
+ * length property of an array. arr.length (compare to String instance, s.length() method)
  */
 public class Array {
 
@@ -78,7 +79,7 @@ public class Array {
         System.out.println(arr[1]); //40
     }
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         Array arr = new Array();
         System.out.println("---arr.init()---");
         arr.init();
@@ -97,7 +98,7 @@ public class Array {
 
         int[] arr1 = {1, 2, 3};
         int[] arr2 = {1, 2, 3};
-        System.out.println("arr1.equals(arr2) = "+ arr1.equals(arr2)); //false
-        System.out.println("Arrays.equals(arr1,arr2) = "+ Arrays.equals(arr1,arr2)); //true
+        System.out.println("arr1.equals(arr2) = " + arr1.equals(arr2)); //false
+        System.out.println("Arrays.equals(arr1,arr2) = " + Arrays.equals(arr1, arr2)); //true
     }
 }

@@ -1,7 +1,23 @@
-package pattern.producerconsumer;
+package pattern.behavior.producerconsumer;
 
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * what is producer-consumer pattern
+ * ChatGPT said:
+ * The Producer-Consumer Pattern is a classic design pattern used to handle the production and consumption of data in a thread-safe and decoupled manner. It is commonly used in multi-threaded applications and message-driven architectures.
+ *
+ * Concept
+ * Producer: Generates data and places it in a shared resource (like a queue).
+ * Consumer: Takes data from the shared resource and processes it.
+ * Buffer (Shared Resource): A data structure (like a queue) that acts as an intermediary between the producer and the consumer.
+ * Key Features
+ * Decoupling: The producer and consumer work independently, allowing for scalability.
+ * Thread Safety: Synchronization mechanisms ensure that multiple producers and consumers can operate without corrupting data.
+ * Blocking or Non-blocking:
+ * Blocking: The producer waits if the buffer is full, and the consumer waits if it's empty.
+ * Non-blocking: Uses asynchronous techniques like callbacks or message queues.
+ */
 class Producer implements Runnable {
     private BlockingQueue<Integer> queue;
 
