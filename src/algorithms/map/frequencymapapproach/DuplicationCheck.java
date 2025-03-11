@@ -10,7 +10,7 @@ import java.util.Map;
 public class DuplicationCheck {
     public static void main(String[] args) {
         int[] arr = {1, 4, 6, 9, 1, 3, 6, 4};
-        Map<Integer, Integer> countMap = FrequencyMap.getCountMap(arr);
+        Map<Integer, Integer> countMap = FrequencyCounter.countEachFrequency(arr);
         for (Map.Entry e : countMap.entrySet()) {
             if ((int) e.getValue() > 1) System.out.println(e.getKey());
         }

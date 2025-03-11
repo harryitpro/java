@@ -9,8 +9,8 @@ import java.util.Map;
  */
 public class ValidateAnagram {
     static boolean isAnagram(String s1, String s2) {
-        Map<Character, Integer> s1CharCountMap = FrequencyMap.getCountMap(s1.toCharArray());
-        Map<Character, Integer> s2CharCountMap = FrequencyMap.getCountMap(s2.toCharArray());
+        Map<Character, Integer> s1CharCountMap = FrequencyCounter.countEachFrequency(s1.toCharArray());
+        Map<Character, Integer> s2CharCountMap = FrequencyCounter.countEachFrequency(s2.toCharArray());
         return s1CharCountMap.equals(s2CharCountMap);
     }
 

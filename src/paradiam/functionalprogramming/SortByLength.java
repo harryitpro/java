@@ -16,7 +16,7 @@ public class SortByLength {
     //anonymous method solution: assign a lambda expression to an functional interface
     static void sortByLengthLambda(List<String> names) {
         //assign a Lambda Expression to a functional interface
-        Comparator<String> compareByLength = (o1, o2) -> o1.length() - o2.length();
+        Comparator<String> compareByLength = Comparator.comparingInt(String::length);
         names.sort(compareByLength);
     }
 
