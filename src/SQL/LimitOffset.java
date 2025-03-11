@@ -13,9 +13,6 @@ package SQL;
  * We need to find the second highest salary.
  *
  * 1️⃣ Using LIMIT and DISTINCT (MySQL, PostgreSQL)
- * sql
- * Copy
- * Edit
  * SELECT DISTINCT Salary
  * FROM Employee
  * ORDER BY Salary DESC

@@ -1,4 +1,4 @@
-package interview;
+package algorithms.array;
 
 //normal situation: use big glass first, then going to small ones
 //use a set to contain the glasses/numbers which have been used, iterate from big to small to get next avaiable one. the subtraction result locate the big index of array, no need to go through every one
