@@ -1,5 +1,7 @@
 package algorithms.map.frequencymapapproach;
 
+import algorithms.fundamental.FrequencyCounter;
+
 import java.util.Map;
 
 /**
