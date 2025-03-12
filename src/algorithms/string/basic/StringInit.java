@@ -16,17 +16,20 @@ package algorithms.string.basic;
 public class StringInit {
 
     //String constructor with char array argument
-    static void convertCharArrayToString() {
-        char[] chars = {'a', 'b'};
+    //Remember chars.toString() will return an instance reference! not a String composed of array
 
-        String s1 = new String(chars); //ab
-        s1.length(); 
-        String s2 = String.valueOf(chars); //ab
-        System.out.println("s1.equals(s2) ? " + s1.equals(s2)); //true
+    static String newObjectFromArray(char[] arr) {
+        return new String(arr);
     }
 
+    static String fromStringStaticMethod(char[] arr) {
+        return String.valueOf(arr);
+
+    }
 
     public static void main(String[] args) {
-        convertCharArrayToString();
+        char[] chars = {'a', 'b'};
+        System.out.println(newObjectFromArray(chars)); //ab
+        System.out.println(fromStringStaticMethod(chars));// ab
     }
 }

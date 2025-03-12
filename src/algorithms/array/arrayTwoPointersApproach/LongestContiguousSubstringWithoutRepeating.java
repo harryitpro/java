@@ -1,4 +1,4 @@
-package algorithms.fundamental.arrayTwoPointersApproach;
+package algorithms.array.arrayTwoPointersApproach;
 
 import java.util.*;
 

@@ -13,10 +13,13 @@ public class CompressStringWithRepeating {
 
             //counting starts by comparing itself
             int count = 0;
-            while (i < N && s.charAt(i) == c) {
-                i++;
-                count++;
-            }
+            for(;i < N && s.charAt(i) == c; i++,count++ );
+
+//            int count = 0;
+//            while (i < N && s.charAt(i) == c) {
+//                i++;
+//                count++;
+//            }
             result.append(count);
         }
         return result.toString();

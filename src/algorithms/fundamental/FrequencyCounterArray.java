@@ -3,7 +3,7 @@ package algorithms.fundamental;
 /**
  * alternative way of Frequency Counter other than the Map<Integer,Integer> freq
  */
-public class CharFrequencyCounter {
+public class FrequencyCounterArray {
     static int[] countEachCharFrequency(String s) {
         int[] freq = new int[128];
         for (char c : s.toCharArray()) {
