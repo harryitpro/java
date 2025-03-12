@@ -9,8 +9,10 @@ public class CompressStringWithRepeating {
         int N = s.length();
         for (int i = 0; i < N; ) {
             char c = s.charAt(i);
-            int count = 0;
             result.append(c);
+
+            //counting starts by comparing itself
+            int count = 0;
             while (i < N && s.charAt(i) == c) {
                 i++;
                 count++;
@@ -27,7 +29,10 @@ public class CompressStringWithRepeating {
         int count = 1;
         for (int i = 1; i < N; i++) {
             if (s.charAt(i) != s.charAt(i - 1)) {
+                //add pre item count info
                 result.append(count);
+
+                //start a new char
                 result.append(s.charAt(i));
                 count = 1;
             } else {
