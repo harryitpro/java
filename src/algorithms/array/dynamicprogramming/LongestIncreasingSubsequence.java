@@ -11,9 +11,23 @@ import java.util.Arrays;
  * Output: 4
  * Explanation: The LIS is [2, 3, 7, 101]
  */
+
+
+/**
+ * Explanation
+ * Base Case:
+ * If the input array is null or empty, the length of the LIS is 0.
+ * DP Array:
+ * We use an array dp[] where dp[i] represents the length of the longest increasing subsequence that ends at index i.
+ * Initially, every element is a subsequence of length 1 (itself), so we initialize dp[i] = 1 for all i.
+ * Main Logic:
+ * For each position i, we look at all previous positions j (where j < i).
+ * If nums[i] > nums[j], it means we can append nums[i] to the subsequence ending at j. In this case, the length of the subsequence ending at i can be dp[j] + 1.
+ * We take the maximum of all such possibilities to update dp[i].
+ * Tracking Maximum Length:
+ * While computing dp[i], we keep track of the overall maximum length (maxLength) seen so far, as the LIS might not necessarily end at the last element.
+ */
 public class LongestIncreasingSubsequence {
-
-
     public int lengthOfLIS(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;

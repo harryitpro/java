@@ -6,9 +6,7 @@ import java.util.*;
 public class ExistSet {
     Set<Integer> getSet(int[] arr) {
         Set<Integer> numberSet = new HashSet<>();
-        for (int i : arr) {
-            numberSet.add(i);
-        }
+        Arrays.stream(arr).forEach(i -> numberSet.add(i));
         return numberSet;
     }
 
@@ -21,10 +19,8 @@ public class ExistSet {
     }
 
     Set<String> getSet(String[] arr) {
-        Set<String> stringSet = new HashSet<>();
-        for (String s : arr) {
-            stringSet.add(s);
-        }
-        return stringSet;
+        Set<String> set = new HashSet<>();
+        Arrays.stream(arr).forEach(s -> set.add(s));
+        return set;
     }
 }

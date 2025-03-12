@@ -9,24 +9,22 @@ import java.util.*;
  * Hint: variable length SlidingWindow + Set
  */
 
-public class LongestSubstringWithoutRepeating {
+public class LongestContiguousSubstringWithoutRepeating {
     static int solution(String s) {
         if (s.length() == 0) return 0;
 
         int left = 0, N = s.length();
         Set<Character> set = new HashSet<>();
-        set.add(s.charAt(left));
-        int maxLength = 1;
+        int maxLength = 0;
         Character c;
-        for (int right = left + 1; right < N; right++) {
+        for (int right = left; right < N; right++) {
             c = s.charAt(right);
             while (set.contains(c)) {
                 //shrink window by increasing left pointer, adjust set accordingly
+                set.remove(s.charAt(left));
                 left++; //shrink window.
-                set.remove(s.charAt(left - 1));
             }
-            //move on with current character
-            set.add(c);
+            set.add(c);  //this char is unique
             maxLength = Math.max(maxLength, right - left + 1);
         }
         return maxLength;
