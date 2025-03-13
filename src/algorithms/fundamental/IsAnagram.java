@@ -1,7 +1,5 @@
 package algorithms.fundamental;
 
-import algorithms.fundamental.FrequencyCounter;
-
 import java.util.Map;
 
 /**
@@ -9,7 +7,7 @@ import java.util.Map;
  * *
  * //how about multiple strings are anagrams of each other:  group.
  */
-public class ValidateAnagram {
+public class IsAnagram {
     static boolean isAnagram(String s1, String s2) {
         Map<Character, Integer> s1CharCountMap = FrequencyCounter.countEachFrequency(s1.toCharArray());
         Map<Character, Integer> s2CharCountMap = FrequencyCounter.countEachFrequency(s2.toCharArray());

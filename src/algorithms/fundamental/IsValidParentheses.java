@@ -10,7 +10,7 @@ package algorithms.fundamental;
  */
 import java.util.Stack;
 
-public class ParenthesesValidator {
+public class IsValidParentheses {
     public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
 

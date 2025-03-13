@@ -3,21 +3,6 @@ package algorithms.fundamental;
 import java.util.*;
 import java.lang.Integer;
 
-/**
- * Common Methods in Map API
- * Method	Description
- * put(K key, V value)	Adds a key-value pair.
- * get(K key)	Retrieves value by key.
- * remove(K key)	Removes an entry by key.
- * containsKey(K key)	Checks if a key exists.
- * containsValue(V value)	Checks if a value exists.
- * keySet()	Returns all keys as a Set<K>.
- * values()	Returns all values as a Collection<V>.
- * entrySet()	Returns all key-value pairs as a Set<Map.Entry<K,V>>.
- * forEach(BiConsumer<K,V>)	Iterates through entries (Java 8+).
- * <p>
- * Map Stream
- */
 public class MapSortByValue {
     static Map sortByValue(Map<String, Integer> map) {
         Map<String, Integer> result = new LinkedHashMap<>();

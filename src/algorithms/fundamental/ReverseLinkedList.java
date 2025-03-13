@@ -13,16 +13,6 @@ public class ReverseLinkedList {
         return prev;
     }
 
-    static class Node {
-        int val;
-        Node next;
-
-        Node(int val) {
-            this.val = val;
-            this.next = null;
-        }
-    }
-
     public static void main(String[] args) {
         Node head = new Node(1);
         head.next = new Node(2);

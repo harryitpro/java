@@ -1,28 +1,11 @@
 package algorithms.fundamental;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.ArrayList;
 
-public class Permutation {
+public class IsPermutation {
     //a permutation means 2 words should have the same character set and frequency
-
-    /**
-     * solution: sort a word using nlog(n) time. both arrays should be identical after sorting.
-     * Similar questions: anagram, permutations...
-     */
-    static boolean isPermutation(String word1, String word2) {
-        if (word1.length() != word2.length()) {
-            return false;
-        }
-        char[] word1chars = word1.toCharArray();
-        char[] word2chars = word2.toCharArray();
-        Arrays.sort(word1chars);
-        Arrays.sort(word2chars);
-
-        return Arrays.equals(word1chars,word2chars);
-    }
-
     //linear time
     public static boolean isPermutationCharFrequency(String s1, String s2) {
         if (s1.length() != s2.length()) return false;
@@ -39,6 +22,22 @@ public class Permutation {
         }
 
         return true;
+    }
+
+    /**
+     * solution: sort a word using nlog(n) time. both arrays should be identical after sorting.
+     * Similar questions: anagram, permutations...
+     */
+    static boolean isPermutation(String word1, String word2) {
+        if (word1.length() != word2.length()) {
+            return false;
+        }
+        char[] word1chars = word1.toCharArray();
+        char[] word2chars = word2.toCharArray();
+        Arrays.sort(word1chars);
+        Arrays.sort(word2chars);
+
+        return Arrays.equals(word1chars, word2chars);
     }
 
     private static List<String> generatePermutations(String s) {

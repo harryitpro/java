@@ -31,7 +31,7 @@ package algorithms.fundamental;
  */
 
 
-public class BSTValidator {
+public class IsBST {
     public boolean isValidBST(TreeNode root) {
         return validate(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
@@ -77,7 +77,7 @@ public class BSTValidator {
         leftChild.left = new TreeNode(2);
         leftChild.right = new TreeNode(8);
 
-        BSTValidator validator = new BSTValidator();
+        IsBST validator = new IsBST();
         System.out.println("is it valid: " + validator.isValidBST(root)); // Output: true
     }
 }

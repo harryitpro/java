@@ -2,11 +2,11 @@ package algorithms.fundamental;
 
 //singly Node for linkedlist
 public class Node {
-    int data;
-    Node next;
+    public int val;
+    public Node next;
 
     public Node(int data) {
-        this.data = data;
+        this.val = data;
         this.next = null;
     }
 }
