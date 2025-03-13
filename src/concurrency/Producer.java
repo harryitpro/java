@@ -1,4 +1,4 @@
-package multithread;
+package concurrency;
 
 /**
  * The Producer-Consumer problem is a classic synchronization problem

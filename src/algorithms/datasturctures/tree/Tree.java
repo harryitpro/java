@@ -1,4 +1,4 @@
-package algorithms.datasturctures.basic;
+package algorithms.datasturctures.tree;
 
 import java.util.ArrayList;
 import java.util.List;

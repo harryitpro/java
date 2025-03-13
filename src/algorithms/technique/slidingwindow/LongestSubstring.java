@@ -1,4 +1,4 @@
-package algorithms.datasturctures.array.slidingwindow;
+package algorithms.technique.slidingwindow;
 
 public class LongestSubstring {
 /**

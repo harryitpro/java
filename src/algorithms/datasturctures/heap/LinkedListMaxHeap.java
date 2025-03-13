@@ -1,4 +1,4 @@
-package algorithms.datasturctures.basic;
+package algorithms.datasturctures.heap;
 
 import java.util.LinkedList;
 import java.util.Queue;

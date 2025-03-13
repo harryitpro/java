@@ -1,4 +1,4 @@
-package algorithms.datasturctures.basic;
+package algorithms.datasturctures.tree;
 
 /**
  * a binary tree is a tree with constraints that each parent at most has 2 children.

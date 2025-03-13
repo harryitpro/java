@@ -1,4 +1,4 @@
-package algorithms.datasturctures.graph;
+package algorithms.fundamental;
 
 import java.util.*;
 

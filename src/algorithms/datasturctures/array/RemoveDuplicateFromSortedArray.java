@@ -1,4 +1,4 @@
-package algorithms.datasturctures.array.arrayTwoPointersApproach;
+package algorithms.datasturctures.array;
 
 import java.util.Arrays;
 

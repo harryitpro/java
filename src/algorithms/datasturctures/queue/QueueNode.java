@@ -1,4 +1,4 @@
-package algorithms.datasturctures.basic;
+package algorithms.datasturctures.queue;
 
 /**
  * Queue: FIFO

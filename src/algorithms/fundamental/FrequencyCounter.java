@@ -1,8 +1,6 @@
 package algorithms.fundamental;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class FrequencyCounter {
     public static Map<Character, Integer> countEachFrequency(char[] arr) {
@@ -33,5 +31,38 @@ public class FrequencyCounter {
         Map<String, Integer> freq = new HashMap<>();
         Arrays.stream(arr).forEach(s -> freq.put(s, freq.getOrDefault(s, 0) + 1));
         return freq;
+    }
+
+    public static int[] countEachCharFrequency(String s) {
+        int[] freq = new int[128];
+        for (char c : s.toCharArray()) {
+            freq[c] = freq[c] + 1;
+        }
+        return freq;
+    }
+
+    public static Set<Integer> toUniqueSet(int[] arr) {
+        Set<Integer> numberSet = new HashSet<>();
+        Arrays.stream(arr).forEach(i -> numberSet.add(i));
+        return numberSet;
+    }
+
+    public static Set<Character> toUniqueSet(char[] arr) {
+        Set<Character> charSet = new HashSet<>();
+        for (char c : arr) {
+            charSet.add(c);
+        }
+        return charSet;
+    }
+
+    public static Set<String> toUniqueSet(String[] arr) {
+        Set<String> set = new HashSet<>();
+        Arrays.stream(arr).forEach(s -> set.add(s));
+        return set;
+    }
+
+    public static void main(String[] args) {
+        String s = "This is CharFrequencyCounter app";
+        System.out.println(countEachCharFrequency(s)[84]); //1  "T"  occurs 1
     }
 }
