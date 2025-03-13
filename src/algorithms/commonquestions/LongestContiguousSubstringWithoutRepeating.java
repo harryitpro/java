@@ -1,21 +1,28 @@
 package algorithms.commonquestions;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
- * Problem Statement:
  * Given a string s, find the length of the longest substring without repeating characters.
- * <p>
- * Hint: variable length SlidingWindow + Set
+ * for example: input: "abcabcbb". output: 3.   ("abc")
  */
-
 public class LongestContiguousSubstringWithoutRepeating {
+    /**
+     * Hint:
+     * maintain a dynamic record of maxLength variable.
+     * use Set<Character> to track duplicate;
+     * maintain a Sliding Window:
+     * (left index, right index), shrink(left increment), or expand(right increment) to track length.
+     * update the Set to maintain satisfied condition.
+     */
     static int solution(String s) {
-        if (s.length() == 0) return 0;
+        if (s.length() == 0 || s.length() == 1) return s.length();
+
+        int maxLength = 0;
 
         int left = 0, N = s.length();
         Set<Character> set = new HashSet<>();
-        int maxLength = 0;
         Character c;
         for (int right = left; right < N; right++) {
             c = s.charAt(right);
