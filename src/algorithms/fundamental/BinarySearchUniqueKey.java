@@ -11,7 +11,7 @@ public class BinarySearchUniqueKey {
     public static int search(int[] arr, int key) {
         int left = 0, right = arr.length - 1;
         int mid;
-        while (left < right) { //stop when left converge with right index
+        while (left <= right) { //stop when left exceeds right index
             mid = left + (right - left) / 2;
             if (arr[mid] == key) return mid;
             if (arr[mid] < key) left = mid + 1;
