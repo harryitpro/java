@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.datasturctures;
 /**
  * data structures in java
  * Java provides various data structures to store and manage data efficiently. These data structures are mainly part of the Java Collections Framework (JCF) and are classified into the following categories:
