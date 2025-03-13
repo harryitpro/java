@@ -26,15 +26,6 @@ public class LowestCommonAncestor {
         }
     }
 
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-    }
-
     // Helper method to test the solution
     public static void main(String[] args) {
         LowestCommonAncestor solution = new LowestCommonAncestor();

@@ -3,8 +3,8 @@ package algorithms.fundamental;
 /**
  * Given a linked list, determine whether it contains a cycle (i.e., a node's next pointer eventually points back to a previous node).
  * 1 → 2 → 3 → 4 → 5
- *       ↑         ↓
- *       8 ← 7 ← 6
+ * ↑         ↓
+ * 8 ← 7 ← 6
  */
 
 /**
@@ -19,15 +19,7 @@ package algorithms.fundamental;
 
 
 public class LinkedListCycleDetection {
-    static class Node {
-        int val;
-        Node next;
 
-        Node(int val) {
-            this.val = val;
-            this.next = null;
-        }
-    }
     public static boolean hasCycle(Node head) {
         if (head == null || head.next == null) {
             return false;

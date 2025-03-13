@@ -14,7 +14,6 @@ public class KeywordCounter {
      */
     public static int countKeyword(String article, String keyword) {
         int count = 0;
-        //the non-word regular expression is "\\W+"
         String[] words = article.split(nonWordExpression);
         for (String word : words) {
             if (word.equalsIgnoreCase(keyword)) {

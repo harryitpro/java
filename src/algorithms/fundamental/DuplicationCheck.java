@@ -13,7 +13,7 @@ public class DuplicationCheck {
         Set<Character> uniqueSet = new HashSet<>();
         for (int i = 0; i < s.length(); i++) {
             if (uniqueSet.contains(s.charAt(i))) {
-                System.out.println(s.charAt(i));
+//                System.out.println(s.charAt(i));
                 return false;
             }
             uniqueSet.add(s.charAt(i));
