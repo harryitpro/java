@@ -1,8 +1,92 @@
+1. Data Structures & Algorithms
+Arrays & Strings
+Two Sum
+
+Given an array of integers, return indices of the two numbers that add up to a specific target.
+
+public int[] twoSum(int[] nums, int target) {
+    Map<Integer, Integer> map = new HashMap<>();
+    for (int i = 0; i < nums.length; i++) {
+        int complement = target - nums[i];
+        if (map.containsKey(complement)) {
+            return new int[]{map.get(complement), i};
+        }
+        map.put(nums[i], i);
+    }
+    return new int[]{};
+}
+Longest Substring Without Repeating Characters
+
+Given a string, find the length of the longest substring without repeating characters.
+Example: "abcabcbb" → 3 ("abc")
+Solution: Use Sliding Window.
+Linked Lists
+Reverse a Linked List
+
+Reverse a singly linked list.
+Solution: Use iteration or recursion.
+Example (Java):
+java
+Copy
+Edit
+public ListNode reverseList(ListNode head) {
+    ListNode prev = null;
+    ListNode current = head;
+    while (current != null) {
+        ListNode next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+    }
+    return prev;
+}
+Detect a Cycle in a Linked List
+
+Use Floyd’s Cycle Detection Algorithm (slow & fast pointers).
+Stacks & Queues
+Valid Parentheses
+
+Given a string with ()[]{}, check if it's valid.
+Solution: Use Stack.
+Implement LRU Cache
+
+Use HashMap + Doubly Linked List.
+Trees & Graphs
+Binary Tree Level Order Traversal
+
+Solution: Use BFS (Queue).
+Find the Lowest Common Ancestor (LCA)
+
+Given a BST and two nodes, find their lowest common ancestor.
+Dijkstra’s Algorithm
+
+Find the shortest path in a graph using PriorityQueue.
+Dynamic Programming (DP)
+Climbing Stairs (f(n) = f(n-1) + f(n-2))
+Longest Common Subsequence (LCS)
+2. SQL & Database
+Find the second-highest salary
+sql
+Copy
+Edit
+SELECT MAX(salary)
+FROM Employee
+WHERE salary < (SELECT MAX(salary) FROM Employee);
+Find duplicate records in a table
+sql
+Copy
+Edit
+SELECT name, COUNT(*)
+FROM Employee
+GROUP BY name
+HAVING COUNT(*) > 1;
+3. System Design (For Experienced Candidates)
+Design a URL Shortener (like Bit.ly)
+Design a Banking Transaction System
+Design a Load Balancer
+
 /**
- * eBay interview questions vary depending on the role (Software Engineer, SDE, QA, etc.) and experience level. Below are some commonly asked Java-based coding, system design, and behavioral questions:
- *
  * 1. Coding Questions (DSA & Java)
- * eBay typically asks DSA-focused questions in Leetcode Medium/Hard range.
  *
  * Array & String
  * Find all contiguous subarrays of an array.

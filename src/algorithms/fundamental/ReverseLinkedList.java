@@ -1,5 +1,7 @@
 package algorithms.fundamental;
 
+import algorithms.datasturctures.Node;
+
 public class ReverseLinkedList {
     static Node reverse(Node head) {
         Node prev = null, current = head, next;

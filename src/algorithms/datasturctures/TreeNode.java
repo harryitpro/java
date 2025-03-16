@@ -1,4 +1,4 @@
-package algorithms.fundamental;
+package algorithms.datasturctures;
 
 /**
  * Binary Tree Node, short to TreeNode

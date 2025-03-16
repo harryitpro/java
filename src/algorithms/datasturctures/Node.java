@@ -1,4 +1,4 @@
-package algorithms.fundamental;
+package algorithms.datasturctures;
 
 //singly Node for linkedlist
 public class Node {

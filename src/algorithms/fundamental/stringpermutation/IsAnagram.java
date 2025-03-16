@@ -1,4 +1,6 @@
-package algorithms.fundamental;
+package algorithms.fundamental.stringpermutation;
+
+import algorithms.fundamental.frequencycounter.FrequencyCounter;
 
 import java.util.Map;
 

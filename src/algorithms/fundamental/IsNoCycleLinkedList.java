@@ -7,6 +7,8 @@ package algorithms.fundamental;
  * 8 ← 7 ← 6
  */
 
+import algorithms.datasturctures.Node;
+
 /**
  * approach: Floyd’s Cycle Detection Algorithm
  * How It Works
