@@ -27,6 +27,12 @@ public class ArrayToStream {
         stream.forEach(System.out::println);
     }
 
+    //Iterate: R of CRUDE
+    void iterateByStream() {
+        int[] arr = {10, 20, 30};
+        Arrays.stream(arr).forEach(System.out::println);
+    }
+
     public static void main(String[] args) {
         stringToStreamArrays();
         stringToStream_Stream();
