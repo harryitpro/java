@@ -1,11 +1,9 @@
-package interview;
+package algorithms.commonquestions;
 
 import java.util.*;
 
-public class Interview {
+public class LargestDigitPalindrome {
     public static String solution(String S) {
-        // Implement your solution here
-
         //build frequency map for digit.
         //go through from 9-1 to build biggest palindrom for digit >=2 for the outer: build ///left and right string builder.
         //update the frequency value
