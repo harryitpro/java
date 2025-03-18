@@ -11,13 +11,7 @@ public class BankAccount {
         return balance;
     }
 
-    public synchronized boolean withdraw(double amount, String customer) {
-        if (balance >= amount) {
-            balance = balance - amount;
-            System.out.println(customer + " successfully withdrew $" + amount +
-                    " (New balance: $" + balance + ")");
-            return true;
-        }
-        return false;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }

@@ -1,4 +1,4 @@
-package basic.concurrency.threadstate;
+package basic.concurrency.threadState;
 
 import basic.concurrency.resource.Counter;
 
