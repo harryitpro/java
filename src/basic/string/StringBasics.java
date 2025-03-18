@@ -1,4 +1,4 @@
-package algorithms.datasturctures.string;
+package basic.string;
 
 
 /**

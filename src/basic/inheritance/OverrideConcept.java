@@ -16,7 +16,7 @@ package basic.inheritance;
  * Exceptions: The overriding method cannot throw checked exceptions that are broader (more general) than the exceptions declared in the parent class method. It can throw fewer or narrower exceptions, or none at all.
  * Annotations: The @Override annotation is not strictly required, but it is highly recommended to use it. This annotation ensures that the method is actually overriding a parent class method, and it helps catch errors at compile time if the signature does not match.
  */
-public class Inheritance {
+public class OverrideConcept {
 
 
 
