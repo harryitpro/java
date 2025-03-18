@@ -13,12 +13,11 @@ public class Counter {
         try {
             System.out.println(Thread.currentThread().getName() + " is sleeping for " + sleepTimeInSeconds + " seconds.");
             Thread.sleep(sleepTimeInSeconds * 1000);
+            count++;
+            System.out.println(Thread.currentThread().getName() + " incremented counter to: " + count);
         } catch (InterruptedException ex) {
             System.out.println(Thread.currentThread().getName() + " get interrupted");
         }
-
-        count++;
-        System.out.println(Thread.currentThread().getName() + " incremented counter to: " + count);
     }
 
     public void decrement() {
