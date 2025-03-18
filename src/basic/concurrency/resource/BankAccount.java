@@ -1,4 +1,4 @@
-package basic.concurrency.realworld.bankaccount;
+package basic.concurrency.resource;
 
 public class BankAccount {
     private double balance;
