@@ -1,4 +1,4 @@
-package basic.concurrency;
+package basic.concurrency.threadconstructor;
 
 //Thread inherently is a mechanism to execute tasks simultaneously.
 

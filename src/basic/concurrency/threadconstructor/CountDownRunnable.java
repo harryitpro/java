@@ -1,9 +1,9 @@
-package basic.concurrency;
+package basic.concurrency.threadconstructor;
 
 /**
  *
  */
-public class CountDownRunnableTask implements Runnable {
+public class CountDownRunnable implements Runnable {
     public void run() {
         for (int i = 20; i > 0; i--) {
             System.out.print(i + " ");
@@ -11,11 +11,11 @@ public class CountDownRunnableTask implements Runnable {
     }
 
     public static void main(String[] args) {
-        Thread countDownThread = new Thread(new CountDownRunnableTask(), "CountDownRunnableTask1");
+        Thread countDownThread = new Thread(new CountDownRunnable(), "CountDownRunnableTask1");
         System.out.println("start thread of " + countDownThread.getName());
         countDownThread.start();
 
-        Thread countDownThread2 = new Thread(new CountDownRunnableTask(), "CountDownRunnableTask2");
+        Thread countDownThread2 = new Thread(new CountDownRunnable(), "CountDownRunnableTask2");
         System.out.println("start thread of " + countDownThread2.getName());
         countDownThread2.start();
 

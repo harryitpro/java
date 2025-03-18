@@ -17,26 +17,8 @@ package basic.inheritance;
  * Annotations: The @Override annotation is not strictly required, but it is highly recommended to use it. This annotation ensures that the method is actually overriding a parent class method, and it helps catch errors at compile time if the signature does not match.
  */
 public class Inheritance {
-    static class Parent {
-        void show() throws Exception {
-            System.out.println("Parent method");
-        }
-    }
 
-    static class Child extends Parent {
 
-        /**
-         * this method is still a VALID override, although it has no @Override, and not throw exception.
-         * the rule is they should have the same method name, parameter and return data type.
-         */
-        void show() {
-            System.out.println("Child method");
-        }
 
-        public static void main(String[] args) throws Exception {
-            Parent p = new Child();
-            p.show();  //Child method.
-        }
-    }
 }
 

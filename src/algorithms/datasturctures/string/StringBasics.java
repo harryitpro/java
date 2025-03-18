@@ -1,4 +1,4 @@
-package basic;
+package algorithms.datasturctures.string;
 
 
 /**
@@ -20,13 +20,19 @@ public class StringBasics {
 
     }
 
-    static void stringEquals() {
+    static void stringObjectEquals() {
         String str1 = "Hello";
         String str2 = new String("Hello");  //new instance, will be difference reference
         System.out.println(str1 == str2);  //false
         System.out.println(str1.equals(str2)); //true/ check value
     }
 
+    //A (String literals with the same value reference the same memory location)
+    static void StringLiteralEquals() {
+        String s1 = "abc";
+        String s2 = "abc";
+        System.out.println(s1 == s2); //true
+    }
 
     /**
      * StringBuilder is mutable
@@ -40,6 +46,5 @@ public class StringBasics {
     public static void main(String[] args) {
         stringIsImmutable();
         stringBuilder();
-        stringEquals();
     }
 }
