@@ -6,7 +6,7 @@ package basic.functionalprogramming.LambdaExpression;
  * example:
  * Creating a Thread using Runnable Interface
  */
-public class RunnableInterface {
+public class RunnableLambdaImpl {
     public Runnable implementRunnableInterface() {
         Runnable runnable = () -> System.out.println("Runnable functional interface implementation");
         return runnable;

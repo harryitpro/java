@@ -1,4 +1,4 @@
-package basic.concurrency.thread.state;
+package basic.concurrency.thread.lifecycle;
 
 /**
  * Thread Static method. to pause thread to stop for a certain amount of time

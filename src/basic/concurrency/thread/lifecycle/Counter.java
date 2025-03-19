@@ -1,4 +1,4 @@
-package basic.concurrency.thread.state;
+package basic.concurrency.thread.lifecycle;
 
 public class Counter {
     private int count;

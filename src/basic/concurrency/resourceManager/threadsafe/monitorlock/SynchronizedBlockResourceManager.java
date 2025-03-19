@@ -1,6 +1,6 @@
-package basic.concurrency.recourcemanager.threadsafety.monitorlock;
+package basic.concurrency.resourceManager.threadsafe.monitorlock;
 
-import basic.concurrency.recourcemanager.BankAccount;
+import basic.concurrency.resourceManager.BankAccount;
 
 /**
  * demo to apply synchronized keyword to block.

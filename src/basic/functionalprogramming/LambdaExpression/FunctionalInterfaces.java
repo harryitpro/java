@@ -9,5 +9,5 @@ package basic.functionalprogramming.LambdaExpression;
  * Consumer<T> (accepts a parameter, no return value)
  * Function<T, R> (accepts a parameter, returns a value)
  */
-public class Overall {
+public class FunctionalInterfaces {
 }

@@ -1,4 +1,4 @@
-package basic.concurrency.recourcemanager;
+package basic.concurrency.resourceManager;
 
 public class BankAccount {
     private double balance;

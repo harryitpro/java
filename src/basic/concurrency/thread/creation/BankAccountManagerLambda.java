@@ -1,6 +1,6 @@
 package basic.concurrency.thread.creation;
 
-import basic.concurrency.recourcemanager.BankAccountManager;
+import basic.concurrency.resourceManager.BankAccountManager;
 
 public class BankAccountManagerLambda {
     private BankAccountManager bankAccountManager;
