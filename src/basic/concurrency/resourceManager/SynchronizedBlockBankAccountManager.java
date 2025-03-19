@@ -10,17 +10,17 @@ public class SynchronizedBlockBankAccountManager {
         this.bankAccount = bankAccount;
     }
 
+    public SynchronizedBlockBankAccountManager() {
+        this.bankAccount = new BankAccount();
+    }
+
     public boolean withdraw(double amount, String customer) {
         synchronized (this) {//It creates a monitor lock on the current object (this)
-            double balance = bankAccount.getBalance();
-            if (balance >= amount) {
-                balance = balance - amount;
-                bankAccount.setBalance(balance);
-                System.out.println(customer + " successfully withdrew $" + amount +
-                        " (New balance: $" + balance + ")");
+            if (bankAccount.getBalance() >= amount) {
+                bankAccount.setBalance(bankAccount.getBalance() - amount);
                 return true;
             }
+            return false;
         }
-        return false;
     }
 }

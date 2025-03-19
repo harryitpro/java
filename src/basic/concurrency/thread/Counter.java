@@ -9,6 +9,10 @@ public class Counter {
         this.sleepInSeconds = i1;
     }
 
+    public int getCount() {
+        return count;
+    }
+
     public void increment() {
         try {
             Thread.sleep(sleepInSeconds * 1000);

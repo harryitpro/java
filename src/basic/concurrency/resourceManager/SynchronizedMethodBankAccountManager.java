@@ -1,7 +1,5 @@
 package basic.concurrency.resourceManager;
 
-import basic.concurrency.resourceManager.BankAccount;
-
 /**
  * demo synchronized method
  */
@@ -12,13 +10,13 @@ public class SynchronizedMethodBankAccountManager {
         this.bankAccount = bankAccount;
     }
 
+    public SynchronizedMethodBankAccountManager() {
+        this.bankAccount = new BankAccount();
+    }
+
     public synchronized boolean withdraw(double amount, String customer) {
-        double balance = bankAccount.getBalance();
-        if (balance >= amount) {
-            balance = balance - amount;
-            bankAccount.setBalance(balance);
-            System.out.println(customer + " successfully withdrew $" + amount +
-                    " (New balance: $" + balance + ")");
+        if (bankAccount.getBalance() >= amount) {
+            bankAccount.setBalance(bankAccount.getBalance() - amount);
             return true;
         }
         return false;

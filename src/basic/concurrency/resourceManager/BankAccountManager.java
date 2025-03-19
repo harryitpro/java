@@ -4,7 +4,6 @@ package basic.concurrency.resourceManager;
  * Not Thread safety
  */
 public class BankAccountManager {
-    //resource
     private BankAccount bankAccount;
 
     public BankAccountManager(BankAccount bankAccount) {
@@ -15,19 +14,12 @@ public class BankAccountManager {
         this(new BankAccount());
     }
 
-    //Task: to withdraw from bank account
-    public boolean withdraw(double amount) {
-        double balance = bankAccount.getBalance();
-        if (balance >= amount) {
-            bankAccount.setBalance(balance - amount);
-            System.out.println("Successfully withdraw!");
+    public boolean withDraw(double amount) {
+        if (bankAccount.getBalance() >= amount) {
+            bankAccount.setBalance(bankAccount.getBalance() - amount);
             return true;
-        } else {
-            System.out.println("No enough Fund!");
-            return false;
         }
+        return false;
     }
-
-    //other methods, for example, deposit...
 
 }

@@ -18,9 +18,11 @@ package basic.concurrency.thread.lifecycle;
 public class ThreadSleep {
     public void sleep() {
         try {
+            //thread moves from the RUNNABLE state to the TIMED_WAITING state
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             System.out.println("Interrupted: " + e.getMessage());
         }
     }
+
 }
