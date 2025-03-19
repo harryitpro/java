@@ -1,14 +1,14 @@
-package basic.concurrency.resourceManager.threadsafe.monitorlock;
+package basic.concurrency.resourceManager;
 
 import basic.concurrency.resourceManager.BankAccount;
 
 /**
  * demo synchronized method
  */
-public class SynchronizedMethodResourceManager {
+public class SynchronizedMethodBankAccountManager {
     private BankAccount bankAccount;
 
-    public SynchronizedMethodResourceManager(BankAccount bankAccount) {
+    public SynchronizedMethodBankAccountManager(BankAccount bankAccount) {
         this.bankAccount = bankAccount;
     }
 

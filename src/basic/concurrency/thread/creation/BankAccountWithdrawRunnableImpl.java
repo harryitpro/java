@@ -8,11 +8,11 @@ import basic.concurrency.resourceManager.BankAccountManager;
  * the key: define the specific task. (method to run, either a running block, or a method from an object)
  * how to construct a Thread and start()
  */
-public class BankAccountWithdrawRunnable implements Runnable {
+public class BankAccountWithdrawRunnableImpl implements Runnable {
     //set up task
     private BankAccountManager bankAccountManager;
 
-    public BankAccountWithdrawRunnable(BankAccountManager bankAccountManager) {
+    public BankAccountWithdrawRunnableImpl(BankAccountManager bankAccountManager) {
         this.bankAccountManager = bankAccountManager;
     }
 
@@ -23,7 +23,7 @@ public class BankAccountWithdrawRunnable implements Runnable {
 
     //Thread client
     public static void main(String[] args) {
-        BankAccountWithdrawRunnable task = new BankAccountWithdrawRunnable(new BankAccountManager());
+        BankAccountWithdrawRunnableImpl task = new BankAccountWithdrawRunnableImpl(new BankAccountManager());
 
         //start a thread
         Thread bankAccountManagerThread = new Thread(task);

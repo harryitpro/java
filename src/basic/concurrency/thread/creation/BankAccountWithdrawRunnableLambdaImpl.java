@@ -9,22 +9,15 @@ import basic.concurrency.resourceManager.BankAccountManager;
 public class BankAccountWithdrawRunnableLambdaImpl {
     private BankAccountManager bankAccountManager;
 
-    static void execute() {
-        BankAccountWithdrawRunnableLambdaImpl bankAccountWithdrawRunnableLambdaImpl = new BankAccountWithdrawRunnableLambdaImpl();
-        BankAccountManager bankAccountManager = bankAccountWithdrawRunnableLambdaImpl.getBankAccountManager();
-
+    public void execute() {
         Runnable task = () -> bankAccountManager.withdraw(50);
-
         Thread thread = new Thread(task);
         thread.start();
     }
 
     public static void main(String[] args) {
-        execute();
-    }
-
-    public BankAccountManager getBankAccountManager() {
-        return bankAccountManager;
+        BankAccountWithdrawRunnableLambdaImpl context = new BankAccountWithdrawRunnableLambdaImpl();
+        context.execute();
     }
 
     public BankAccountWithdrawRunnableLambdaImpl(BankAccountManager bankAccountManager) {

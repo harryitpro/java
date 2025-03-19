@@ -1,5 +1,7 @@
 package basic.concurrency.thread.lifecycle;
 
+import basic.concurrency.thread.Counter;
+
 /**
  * instance methods.
  * ensure that a thread finishes its task before the main program (or another thread) continues.
@@ -29,9 +31,9 @@ package basic.concurrency.thread.lifecycle;
  */
 public class ThreadJoin {
     public static void main(String[] args) {
-        CounterResource counterResource = new CounterResource(0, 2);
-        Thread t1 = new Thread(() -> counterResource.increment());
-        Thread t2 = new Thread(() -> counterResource.increment());
+        Counter counter = new Counter(0, 2);
+        Thread t1 = new Thread(() -> counter.increment());
+        Thread t2 = new Thread(() -> counter.increment());
         t1.start();
         try {
             t1.join();
