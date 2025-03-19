@@ -1,4 +1,4 @@
-package basic.concurrency.threadCreation;
+package basic.concurrency.thread.creation;
 
 /**
  *

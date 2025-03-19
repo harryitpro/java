@@ -1,6 +1,4 @@
-package basic.concurrency.threadState;
-
-import basic.concurrency.resource.Counter;
+package basic.concurrency.thread.state;
 
 /**
  * instance methods.

@@ -1,19 +1,19 @@
-package basic.concurrency.threadSynchronization;
+package basic.concurrency.recourcemanager.threadsafety.monitorlock;
 
 import basic.concurrency.resource.BankAccount;
 
 /**
  * demo to apply synchronized keyword to block.
  */
-public class BlockSynchronizedAccountManager {
+public class BlockSynchronizedResourceManager {
     private BankAccount bankAccount;
 
-    public BlockSynchronizedAccountManager(BankAccount bankAccount) {
+    public BlockSynchronizedResourceManager(BankAccount bankAccount) {
         this.bankAccount = bankAccount;
     }
 
     public boolean withdraw(double amount, String customer) {
-        synchronized (this) {
+        synchronized (this) {//It creates a monitor lock on the current object (this)
             double balance = bankAccount.getBalance();
             if (balance >= amount) {
                 balance = balance - amount;
