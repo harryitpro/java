@@ -1,7 +1,5 @@
 package basic.concurrency.recourcemanager;
 
-import basic.concurrency.resource.BankAccount;
-
 /**
  * Not Thread safety
  */

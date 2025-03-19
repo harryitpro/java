@@ -1,14 +1,14 @@
 package basic.concurrency.recourcemanager.threadsafety.monitorlock;
 
-import basic.concurrency.resource.BankAccount;
+import basic.concurrency.recourcemanager.BankAccount;
 
 /**
  * demo to apply synchronized keyword to block.
  */
-public class BlockSynchronizedResourceManager {
+public class SynchronizedBlockResourceManager {
     private BankAccount bankAccount;
 
-    public BlockSynchronizedResourceManager(BankAccount bankAccount) {
+    public SynchronizedBlockResourceManager(BankAccount bankAccount) {
         this.bankAccount = bankAccount;
     }
 
