@@ -29,9 +29,9 @@ package basic.concurrency.thread.lifecycle;
  */
 public class ThreadJoin {
     public static void main(String[] args) {
-        Counter counter = new Counter(0, 2);
-        Thread t1 = new Thread(() -> counter.increment());
-        Thread t2 = new Thread(() -> counter.increment());
+        CounterResource counterResource = new CounterResource(0, 2);
+        Thread t1 = new Thread(() -> counterResource.increment());
+        Thread t2 = new Thread(() -> counterResource.increment());
         t1.start();
         try {
             t1.join();

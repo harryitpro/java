@@ -1,10 +1,10 @@
 package basic.concurrency.thread.lifecycle;
 
-public class Counter {
+public class CounterResource {
     private int count;
     private int sleepInSeconds;
 
-    public Counter(int i, int i1) {
+    public CounterResource(int i, int i1) {
         this.count = i;
         this.sleepInSeconds = i1;
     }

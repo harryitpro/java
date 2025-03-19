@@ -3,8 +3,8 @@ package basic.concurrency.thread.lifecycle;
 public class ThreadInterrupt {
     //demo interrupt a thread before it starts processing data update
     public static void interruptThread() {
-        Counter counter = new Counter(0, 5);  //pause 5 seconds
-        Thread t1 = new Thread(() -> counter.increment());
+        CounterResource counterResource = new CounterResource(0, 5);  //pause 5 seconds
+        Thread t1 = new Thread(() -> counterResource.increment());
         t1.start();
         try {
             Thread.sleep(2000);
@@ -21,8 +21,8 @@ public class ThreadInterrupt {
 
     //demo interrupt a thread before it starts processing data update
     public static void noInterruptThread() {
-        Counter counter = new Counter(0, 5);  //pause 5 seconds
-        Thread t1 = new Thread(() -> counter.increment());
+        CounterResource counterResource = new CounterResource(0, 5);  //pause 5 seconds
+        Thread t1 = new Thread(() -> counterResource.increment());
         t1.start();
         try {
             Thread.sleep(2000);
