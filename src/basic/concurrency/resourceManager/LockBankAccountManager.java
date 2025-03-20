@@ -7,14 +7,6 @@ public class LockBankAccountManager {
     private BankAccount bankAccount;
     private final Lock lock = new ReentrantLock();
 
-    public LockBankAccountManager(BankAccount bankAccount) {
-        this.bankAccount = bankAccount;
-    }
-
-    public LockBankAccountManager() {
-        this.bankAccount = new BankAccount();
-    }
-
     public boolean withDraw(double amount) {
         lock.lock();
         try {
@@ -26,5 +18,13 @@ public class LockBankAccountManager {
         } finally {
             lock.unlock();
         }
+    }
+
+    public LockBankAccountManager(BankAccount bankAccount) {
+        this.bankAccount = bankAccount;
+    }
+
+    public LockBankAccountManager() {
+        this.bankAccount = new BankAccount();
     }
 }

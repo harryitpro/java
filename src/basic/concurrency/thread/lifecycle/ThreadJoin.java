@@ -31,15 +31,17 @@ import basic.concurrency.thread.Counter;
  */
 public class ThreadJoin {
     public static void main(String[] args) {
-        Counter counter = new Counter(0, 2);
-        Thread t1 = new Thread(() -> counter.increment());
-        Thread t2 = new Thread(() -> counter.increment());
-        t1.start();
+        Counter counter = new Counter();
+        Thread counterIncrementT1 = new Thread(() -> counter.increment());
+        Thread counterIncrementT2 = new Thread(() -> counter.increment());
+        counterIncrementT1.start();
+
         try {
-            t1.join();
+            counterIncrementT1.join();
         } catch (InterruptedException ex) {
-            System.out.println("interrupted");
+            System.out.println("main thread interrupted");
         }
-        t2.start();
+
+        counterIncrementT1.start();
     }
 }

@@ -2,12 +2,7 @@ package basic.concurrency.thread;
 
 public class Counter {
     private int count;
-    private int sleepInSeconds;
-
-    public Counter(int i, int i1) {
-        this.count = i;
-        this.sleepInSeconds = i1;
-    }
+    private final int sleepInSeconds = 5;
 
     public int getCount() {
         return count;
