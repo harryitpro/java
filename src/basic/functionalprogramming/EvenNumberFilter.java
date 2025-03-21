@@ -1,4 +1,4 @@
-package paradiam.functionalprogramming;
+package basic.functionalprogramming;
 
 import java.util.Arrays;
 import java.util.List;

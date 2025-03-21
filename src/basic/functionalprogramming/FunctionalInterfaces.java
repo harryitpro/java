@@ -1,4 +1,4 @@
-package paradiam.functionalprogramming;
+package basic.functionalprogramming;
 
 public class FunctionalInterfaces {
     void ComparatorInterface() {
