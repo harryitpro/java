@@ -14,7 +14,7 @@ public class BankAccountManager {
         this(new BankAccount());
     }
 
-    public boolean withDraw(double amount) {
+    public boolean withdraw(double amount) {
         if (bankAccount.getBalance() >= amount) {
             bankAccount.setBalance(bankAccount.getBalance() - amount);
             return true;

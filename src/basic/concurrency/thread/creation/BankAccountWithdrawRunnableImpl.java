@@ -18,7 +18,7 @@ public class BankAccountWithdrawRunnableImpl implements Runnable {
 
     @Override
     public void run() {
-        bankAccountManager.withdraw(50);
+        bankAccountManager.withdraw(50.0);
     }
 
     //Thread client
