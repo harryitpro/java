@@ -1,4 +1,4 @@
-package algorithms.fundamental.stringpermutation;
+package practice.algorithm;
 
 import java.util.ArrayList;
 import java.util.Arrays;

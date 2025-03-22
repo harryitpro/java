@@ -1,4 +1,4 @@
-package practice.lang;
+package algorithms.datasturctures.array;
 
 import java.util.Arrays;
 import java.util.List;

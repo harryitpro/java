@@ -1,12 +1,10 @@
-package practice.algorithm;
+package algorithms.fundamental;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.*;
 
 //dijkstra
 //not study yet.
-public class ShortestPath {
+public class GraphShortestPath {
     static class Node {
         int vertex, weight;
         public Node(int vertex, int weight) {

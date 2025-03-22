@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * Find duplicated numbers in an unsorted array:
  */
-public class IsNonRepeat {
+public class IsStringWithoutRepeatingChar {
     public static boolean isUniqueString(String s) {
         //use Set to check duplication
         Set<Character> uniqueSet = new HashSet<>();

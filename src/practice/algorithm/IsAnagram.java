@@ -1,6 +1,6 @@
-package algorithms.fundamental.stringpermutation;
+package practice.algorithm;
 
-import algorithms.fundamental.frequencycounter.FrequencyCounter;
+import algorithms.fundamental.FrequencyCounter;
 
 import java.util.Map;
 
@@ -11,12 +11,12 @@ import java.util.Map;
  */
 public class IsAnagram {
     static boolean isAnagram(String s1, String s2) {
-        Map<Character, Integer> s1CharCountMap = FrequencyCounter.countEachFrequency(s1.toCharArray());
-        Map<Character, Integer> s2CharCountMap = FrequencyCounter.countEachFrequency(s2.toCharArray());
+        Map<Character, Integer> s1CharCountMap = FrequencyCounter.toFreqMap(s1.toCharArray());
+        Map<Character, Integer> s2CharCountMap = FrequencyCounter.toFreqMap(s2.toCharArray());
         return s1CharCountMap.equals(s2CharCountMap);
     }
 
     public static void main(String[] args) {
-        System.out.println(isAnagram("abc","bac"));
+        System.out.println(isAnagram("abc", "bac"));
     }
 }
