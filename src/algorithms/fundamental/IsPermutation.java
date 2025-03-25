@@ -1,4 +1,4 @@
-package practice.algorithm;
+package algorithms.fundamental;
 
 import java.util.ArrayList;
 import java.util.Arrays;

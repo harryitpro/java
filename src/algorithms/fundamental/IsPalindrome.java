@@ -1,4 +1,4 @@
-package practice.algorithm;
+package algorithms.fundamental;
 
 /**
  * given a String, verify whether it's a palindrome

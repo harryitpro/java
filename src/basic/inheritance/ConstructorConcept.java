@@ -2,7 +2,6 @@ package basic.inheritance;
 
 /**
  * Constructor Basics:
- * A constructor is a special method in a class that initializes an object when it’s created using the new keyword.
  * Constructors are not inherited by subclasses, but the subclass can invoke the superclass constructor explicitly or implicitly.
  * <p>
  * Key Rules to Remember
