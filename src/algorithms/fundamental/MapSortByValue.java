@@ -1,4 +1,4 @@
-package algorithms.fundamental.sort;
+package algorithms.fundamental;
 
 import java.util.*;
 import java.lang.Integer;
