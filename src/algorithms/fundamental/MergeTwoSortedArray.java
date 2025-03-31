@@ -9,15 +9,15 @@ public class MergeTwoSortedArray {
         int i = 0, j = 0;  //i: arr1 index, j: arr2 index
 
         for (int k = 0; k < merged.length; k++) {
-            if (i == arr1.length) {
+            if (i == arr1.length)
                 merged[k] = arr2[j++];
-            } else if (j == arr2.length) {
+            else if (j == arr2.length)
                 merged[k] = arr1[i++];
-            } else if (arr1[i] < arr2[j]) {
+            else if (arr1[i] < arr2[j])
                 merged[k] = arr1[i++];
-            } else {
+            else
                 merged[k] = arr2[j++];
-            }
+
         }
         return merged;
     }
