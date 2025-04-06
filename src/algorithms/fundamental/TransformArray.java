@@ -1,4 +1,4 @@
-package algorithms.datasturctures.array;
+package algorithms.fundamental;
 
 import java.util.stream.*;
 import java.util.*;
@@ -12,7 +12,7 @@ import java.util.*;
  * Arrays.stream(primitiveArray)	Primitives (int[], double[])	Specialized streams like IntStream
  * Arrays.stream(array, start, end)	Objects & Primitives	Partial array to stream
  */
-public class ArrayToStream {
+public class TransformArray {
     //convert a String (object) array to a stream,
     //using Arrays.stream static method
     public static void stringToStreamArrays() {
@@ -25,12 +25,6 @@ public class ArrayToStream {
         String[] days = {"sunday", "Monday", "Tuesday"};
         Stream<String> stream = Stream.of(days);
         stream.forEach(System.out::println);
-    }
-
-    //Iterate: R of CRUDE
-    void iterateByStream() {
-        int[] arr = {10, 20, 30};
-        Arrays.stream(arr).forEach(System.out::println);
     }
 
     public static void main(String[] args) {

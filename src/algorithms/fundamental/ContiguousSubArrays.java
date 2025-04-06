@@ -1,4 +1,4 @@
-package algorithms.datasturctures.array;
+package algorithms.fundamental;
 
 import java.util.ArrayList;
 import java.util.Arrays;
