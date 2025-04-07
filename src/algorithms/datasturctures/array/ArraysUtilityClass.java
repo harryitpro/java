@@ -14,7 +14,7 @@ import java.util.stream.Stream;
  * Arrays.asList()
  * Arrays.stream()
  */
-public class ArraysHelperClass {
+public class ArraysUtilityClass {
 
     //sorting array -- very important.
     static void sort() {

@@ -3,13 +3,14 @@ package algorithms.datasturctures.array;
 import java.util.Arrays;
 
 /**
- * Initialization
- * iterate each element of an array.
- * array's equals
+ * Initialize with Values
+ * array's equals.
+ * with streams.
  */
 
 public class Array {
-    void init() {
+    void initializeWithValues() {
+
         //Declare and Initialize in one
         char[] chars = new char[]{'a', 'b', 'c'};
 
@@ -58,8 +59,10 @@ public class Array {
         return Arrays.equals(arr1, arr2);
     }
 
-    public static void main(String[] args) {
-        iterate();
-        checkEqual();
+    public static void swap(int[] arr, int i, int j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
     }
+
 }
