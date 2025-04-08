@@ -11,6 +11,11 @@ public class ReverseInteger {
         return rev;
     }
 
+    static String reverse(String s) {
+        StringBuilder stringBuilder = new StringBuilder(s);
+        return stringBuilder.reverse().toString();
+    }
+
     public static void main(String[] args) {
         System.out.println(reverse(123)); //321
         System.out.println(reverse(-123)); //-321

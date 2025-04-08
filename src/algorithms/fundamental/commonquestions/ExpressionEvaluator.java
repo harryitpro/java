@@ -1,4 +1,4 @@
-package algorithms.commonquestions;
+package algorithms.fundamental.commonquestions;
 
 /**
  * * For expression evaluation; such as 3*(4+5)

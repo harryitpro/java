@@ -1,4 +1,4 @@
-package algorithms.commonquestions;
+package algorithms.fundamental.commonquestions;
 
 //Key: adjacency duplication check and count
 //solution: get first different element, and compare it with elements to its right

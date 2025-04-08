@@ -5,18 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Find all contiguous subarrays of an array
+ * Find all contiguous sub-arrays of an array
  */
 public class ContiguousSubArrays {
-    /**
-     * To find all contiguous subarrays of an array, we generate all possible subarrays using nested loops. Here’s how:
-     * Approach:
-     * Use two loops:
-     * The outer loop picks the starting index.
-     * The inner loop picks the ending index, forming subarrays.
-     * Extract and print each subarray.
-     * Time Complexity: the time complexity is O(n²).
-     */
     static List<char[]> findAllContiguousSubArrays(char[] arr) {
         List<char[]> subArrays = new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {

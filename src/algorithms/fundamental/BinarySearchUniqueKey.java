@@ -6,11 +6,12 @@ package algorithms.fundamental;
  */
 public class BinarySearchUniqueKey {
     public static int binarySearch(int[] arr, int key) {
-        for (int left = 0, right = arr.length - 1; left <= right; ) {
-            int mid = left + (right - left) / 2;
+        int lo = 0, hi = arr.length - 1;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
             if (arr[mid] == key) return mid;
-            if (arr[mid] < key) left = mid + 1;
-            else right = mid - 1;
+            else if (arr[mid] < key) lo = ++mid;
+            else hi = --mid;
         }
         return -1;
     }

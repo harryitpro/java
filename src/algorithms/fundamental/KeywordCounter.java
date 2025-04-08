@@ -1,5 +1,7 @@
 package algorithms.fundamental;
 
+import java.util.Arrays;
+
 /**
  * To count occurrences of a keyword in an article (text)
  * return counter
@@ -7,20 +9,13 @@ package algorithms.fundamental;
 public class KeywordCounter {
     private static String nonWordExpression = "\\W+";
 
-
     /**
      * Uses regular expressions (\W+ or \b\w+\b) to split text into words.
      * Case-insensitive comparison (equalsIgnoreCase(), ignoreCase = true, .lower()).
      */
-    public static int countKeyword(String article, String keyword) {
-        int count = 0;
+    public static int countKeyword(String article, String key) {
         String[] words = article.split(nonWordExpression);
-        for (String word : words) {
-            if (word.equalsIgnoreCase(keyword)) {
-                count++;
-            }
-        }
-        return count;
+        return (int) Arrays.stream(words).filter(word -> word.equalsIgnoreCase(key)).count();
     }
 
     public static void main(String[] args) {

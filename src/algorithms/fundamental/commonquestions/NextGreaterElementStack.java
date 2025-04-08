@@ -1,4 +1,4 @@
-package algorithms.commonquestions;
+package algorithms.fundamental.commonquestions;
 
 import java.util.Arrays;
 import java.util.Stack;

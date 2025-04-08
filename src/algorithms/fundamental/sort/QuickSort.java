@@ -2,6 +2,8 @@ package algorithms.fundamental.sort;
 
 import java.util.Arrays;
 
+import static algorithms.datasturctures.array.Array.swap;
+
 /**
  * QuickSort is a divide-and-conquer sorting algorithm that is efficient for large datasets. It picks a pivot, partitions the array around it, and recursively sorts the subarrays.
  */
@@ -13,8 +15,8 @@ import java.util.Arrays;
  * The partition() method takes an array and rearranges it so that:
  * <p>
  * All elements less than or equal to the pivot are on the left side.
- *  keep the element as where it is if current PI and I point to the same element
- *  or swap the element with the big element the PI points to
+ * keep the element as where it is if current PI and I point to the same element
+ * or swap the element with the big element the PI points to
  * All elements greater than the pivot are on the right side
  * The pivot ends up in its final sorted position
  */
@@ -43,24 +45,22 @@ public class QuickSort {
         //select pivotal
         int pivot = arr[right];
 
-        int pi = left - 1;
+        int partition = left - 1;
         // go through all element in the array,
         for (int i = left; i < right; i++) {
             if (arr[i] <= pivot) {
-                pi++;
-                if (i != pi) {
-                    int temp = arr[i];
-                    arr[i] = arr[pi];
-                    arr[pi] = temp;
+                partition++;
+                if (i != partition) {
+                    swap(arr,i,partition);
                 }
             }
         }
 
         // Swap arr[i+1] and arr[high] (pivot)
-        arr[right] = arr[++pi];
-        arr[pi] = pivot;
+        arr[right] = arr[++partition];
+        arr[partition] = pivot;
 
-        return pi;
+        return partition;
     }
 
     // client
