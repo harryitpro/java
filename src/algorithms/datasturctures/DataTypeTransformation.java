@@ -1,4 +1,4 @@
-package algorithms.fundamental;
+package algorithms.datasturctures;
 
 import java.util.Arrays;
 import java.util.List;
