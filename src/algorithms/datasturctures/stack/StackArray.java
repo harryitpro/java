@@ -11,6 +11,7 @@ class StackArray {
     private int capacity;
     private int[] stack;
     private int top;
+
     public StackArray(int size) {
         this.capacity = size;
         this.stack = new int[size];
