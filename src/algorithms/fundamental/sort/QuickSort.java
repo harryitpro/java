@@ -42,30 +42,22 @@ public class QuickSort {
 
     // main process,to put the pivotal element on to right position.
     public static int partition(int[] arr, int left, int right) {
-        //select pivotal
         int pivot = arr[right];
-
-        int partition = left - 1;
-        // go through all element in the array,
+        int partition = left;
+        // single pass of the array for the range
         for (int i = left; i < right; i++) {
             if (arr[i] <= pivot) {
-                partition++;
-                if (i != partition) {
-                    swap(arr,i,partition);
-                }
+                swap(arr, i, partition++);
             }
         }
-
-        // Swap arr[i+1] and arr[high] (pivot)
-        arr[right] = arr[++partition];
-        arr[partition] = pivot;
-
+        //complete
+        swap(arr, partition, right);
         return partition;
     }
 
     // client
     public static void main(String[] args) {
-        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        int[] arr = {64, 34, 25, 90, 12, 22, 11, 90};
         System.out.println("Original array:" + Arrays.toString(arr));
         sort(arr);
         System.out.println("Sorted array:" + Arrays.toString(arr));
