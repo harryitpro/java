@@ -1,7 +1,6 @@
-package algorithms.datasturctures;
+package algorithms.fundamental;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class DataTypeTransformation {
     //convert array to list: use Arrays.asList(array);
@@ -24,4 +23,7 @@ public class DataTypeTransformation {
         return (char) (n + '0');
     }
 
+    Map<String, Integer> stringFreq = new HashMap<>();
+    List<Map.Entry<String, Integer>> entris = new ArrayList<>(stringFreq.entrySet());
+    List<Map.Entry<String, Integer>> linkedList = new LinkedList<>(stringFreq.entrySet());
 }

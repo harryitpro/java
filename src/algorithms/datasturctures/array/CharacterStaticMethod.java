@@ -1,4 +1,4 @@
-package algorithms.datasturctures.string;
+package algorithms.datasturctures.array;
 
 /**
  * Built-in Character Class (Java Standard)

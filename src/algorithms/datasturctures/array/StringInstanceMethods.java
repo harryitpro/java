@@ -1,4 +1,4 @@
-package algorithms.datasturctures.string;
+package algorithms.datasturctures.array;
 
 import java.util.Arrays;
 

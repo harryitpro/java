@@ -1,4 +1,4 @@
-package algorithms.datasturctures.string;
+package algorithms.datasturctures.array;
 
 /**
  * List of Common Static Methods in String Class
