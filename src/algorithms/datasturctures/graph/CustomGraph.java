@@ -15,23 +15,31 @@ public class CustomGraph {
     }
 
     /**
-     * add Edge from i -> j
+     * add Edge from i -> j to
+     * private Map<Integer, List<Integer>> graph;
      */
     public void addEdge(Integer i, Integer j) {
         graph.putIfAbsent(i, new ArrayList<Integer>());
         graph.get(i).add(j);
+
+        //alternative solution
+        List<Integer> adj = graph.getOrDefault(i, new ArrayList<>());
+        adj.add(j);
+        graph.put(i, adj);
     }
 
     //build undirected graph from an adjList.
     public void addAdjList(List<Integer> adjList) {
         //FOR each element in the list. -- complete pseudo code description
         for (int i = 0; i < adjList.size(); i++) {
+            List<Integer> adjs = graph.getOrDefault(adjList.get(i), new ArrayList<>());
             for (int j = 0; j < adjList.size(); j++) {
                 //pair i and j to be an Edge.
                 if (i != j) {
-                    addEdge(adjList.get(i), adjList.get(j));
+                    adjs.add(adjList.get(j));
                 }
             }
+            graph.putIfAbsent(adjList.get(i), adjs);
         }
     }
 
