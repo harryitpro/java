@@ -6,7 +6,8 @@ public class QueueLinkedList {
     private Node front, rear; //front for dequeue, rear for enqueue
 
     public void enqueue(int data) {
-        if (isEmtpy()) front = rear = new Node(data);
+        if (isEmtpy())
+            front = rear = new Node(data);
         else {
             rear.next = new Node(data);
             rear = rear.next;
