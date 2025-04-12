@@ -43,15 +43,9 @@ class QueueArray {
 
     // Display Queue
     public void display() {
-        if (isEmpty()) {
-            System.out.println("Queue is empty");
-            return;
-        }
-        System.out.print("Queue: ");
         for (int i = 0; i < size; i++) {
             System.out.print(queue[(front + i) % capacity] + " ");
         }
-        System.out.println();
     }
 
     public boolean isFull() {

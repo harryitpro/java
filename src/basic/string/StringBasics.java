@@ -35,7 +35,9 @@ public class StringBasics {
     }
 
     /**
-     * StringBuilder is mutable
+     * StringBuilder is mutable, meaning its contents can be modified without creating a new object.
+     * The reverse() method modifies the current StringBuilder instance by reversing the characters.
+     * It returns this, allowing method chaining.
      */
     static void stringBuilder() {
         StringBuilder sb = new StringBuilder("Hello");
