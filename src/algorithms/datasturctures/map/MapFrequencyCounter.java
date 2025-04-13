@@ -1,8 +1,8 @@
-package algorithms.algorithms.basic;
+package algorithms.datasturctures.map;
 
 import java.util.*;
 
-public class Map_FrequencyCounter {
+public class MapFrequencyCounter {
     //for primitive character, there is no class like IntStream.
     public static Map<Character, Integer> toFreqMap(char[] arr) {
         Map<Character, Integer> freq = new HashMap<>();

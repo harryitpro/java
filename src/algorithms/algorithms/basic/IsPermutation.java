@@ -1,4 +1,4 @@
-package algorithms.algorithms;
+package algorithms.algorithms.basic;
 
 public class IsPermutation {
     //a permutation means 2 words should have the same character set and frequency
@@ -21,8 +21,6 @@ public class IsPermutation {
     }
 
     public static void main(String[] args) {
-//        List<String> perms = generatePermutations("abc");
-//        perms.stream().forEach(System.out::println);
         System.out.println(isPermutation("abc", "bac"));
     }
 }

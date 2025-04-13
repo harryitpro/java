@@ -1,4 +1,4 @@
-package algorithms.algorithms.basic;
+package algorithms.datasturctures.array;
 
 /**
  * given a String, verify whether it's a palindrome

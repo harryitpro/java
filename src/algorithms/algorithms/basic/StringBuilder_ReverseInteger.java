@@ -1,6 +1,6 @@
 package algorithms.algorithms.basic;
 
-public class ReverseInteger {
+public class StringBuilder_ReverseInteger {
     public static int reverse(int x) {
         int rev = 0;
         while (x != 0) {

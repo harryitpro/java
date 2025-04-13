@@ -1,11 +1,11 @@
-package algorithms.algorithms;
+package algorithms.algorithms.basic;
 
 import java.util.*;
 
 /**
  * given an array of integers, return (all) indices of the two numbers that add up to a specific target
  */
-public class TwoSum {
+public class Map_TwoSumOfUniqueNumber {
     /**
      *
      * @param nums: the array of integers.
