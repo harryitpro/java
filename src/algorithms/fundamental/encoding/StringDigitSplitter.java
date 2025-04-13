@@ -1,4 +1,4 @@
-package algorithms.fundamental;
+package algorithms.fundamental.encoding;
 
 import java.util.*;
 
@@ -6,6 +6,7 @@ public class StringDigitSplitter {
     private static void splitString(String s) {
         List<String> strings = new ArrayList<>();
         List<Integer> numbers = new ArrayList<>();
+
         //split string to char arrays, and split String/number respectively
         int index = 0;
         while (index < s.length()) {

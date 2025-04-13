@@ -17,10 +17,8 @@ public class ArrayDeduplicator {
 
         // Single pass through the array
         for (int i = 1; i < arr.length; i++) {
-            if (arr[i] != arr[i - 1]) {
-                arr[positionIndex] = arr[i];
-                positionIndex++;
-            }
+            if (arr[i] != arr[i - 1])
+                arr[positionIndex++] = arr[i];
         }
 
         // Fill remaining positions with a sentinel value (optional)

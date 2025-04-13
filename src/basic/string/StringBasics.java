@@ -42,6 +42,7 @@ public class StringBasics {
     static void stringBuilder() {
         StringBuilder sb = new StringBuilder("Hello");
         sb.append(" World");
+        sb.toString();
         System.out.println(sb); //Hello World
     }
 
