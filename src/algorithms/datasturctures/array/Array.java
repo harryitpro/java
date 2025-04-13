@@ -8,6 +8,17 @@ import java.util.Arrays;
  * with streams.
  */
 
+/**
+ * Arrays factory methods.
+ * Arrays.equals(arr1,arr2)
+ * Arrays.toString() : list each element in string.
+ * Arrays.sort()
+ * Arrays.binarySearch()
+ * Arrays.asList()
+ * Arrays.stream()
+ * Arrays.copyOfRange(arr, i, i + k)
+ */
+
 public class Array {
     void initializeWithValues() {
 

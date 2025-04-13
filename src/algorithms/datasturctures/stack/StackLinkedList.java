@@ -1,5 +1,7 @@
 package algorithms.datasturctures.stack;
 
+import algorithms.datasturctures.Node;
+
 class StackLinkedList {
     private Node top;
 
@@ -19,7 +21,7 @@ class StackLinkedList {
         if (isEmpty()) {
             throw new RuntimeException("Stack is empty");
         }
-        return top.data;
+        return top.val;
     }
 
     //O(1) time complexity
@@ -29,30 +31,11 @@ class StackLinkedList {
         }
         Node tmp = top;
         top = top.next;
-        return tmp.data;
+        return tmp.val;
     }
 
     public boolean isEmpty() {
         return top == null;
-    }
-
-    private static class Node {
-        int data;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
-
-    public static void main(String[] args) {
-        StackLinkedList stack = new StackLinkedList();
-        stack.push(100);
-        stack.push(200);
-        stack.push(300);
-        System.out.println(stack.pop()); // 300
-        System.out.println(stack.peek()); // 200
     }
 }
 
