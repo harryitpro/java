@@ -1,4 +1,4 @@
-package algorithms.algorithms.encoding;
+package algorithms.algorithms.basic;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ import java.util.*;
  * transform a word to char[], sort it to new word.
  * anagram words should be the same.
  */
-public class AnagramGroups {
+public class Map_AnagramGroups {
     static Set<Map<Character, Integer>> findAnagramsToSet(String[] words) {
         Set<Map<Character, Integer>> groupSet = new HashSet<>();
         for (String s : words) {

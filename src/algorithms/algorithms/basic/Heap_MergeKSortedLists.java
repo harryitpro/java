@@ -1,4 +1,4 @@
-package algorithms.todo;
+package algorithms.algorithms.basic;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import java.util.List;
  */
 import java.util.*;
 
-public class MergeKSortedLists {
+public class Heap_MergeKSortedLists {
 
     public static List<Integer> mergeSortedLists(List<List<Integer>> lists) {
         List<Integer> result = new ArrayList<>();

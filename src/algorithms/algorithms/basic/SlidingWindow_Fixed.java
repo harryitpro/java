@@ -1,4 +1,4 @@
-package algorithms.algorithms.slidingwindow;
+package algorithms.algorithms.basic;
 
 /**
  * Problem Statement:
@@ -14,7 +14,7 @@ package algorithms.algorithms.slidingwindow;
  * Track the maximum sum.
  */
 
-public class SlidingWindowFixed {
+public class SlidingWindow_Fixed {
     public static int maxSumSubarray(int[] nums, int k) {
         if (nums.length < k) return -1;
 

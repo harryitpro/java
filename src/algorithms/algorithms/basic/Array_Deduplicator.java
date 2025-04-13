@@ -1,8 +1,8 @@
-package algorithms.algorithms;
+package algorithms.algorithms.basic;
 
 import java.util.Arrays;
 
-public class ArrayDeduplicator {
+public class Array_Deduplicator {
     public static int distinctArrayInPlace(int[] arr) {
         // Handle edge cases
         if (arr == null) {

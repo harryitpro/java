@@ -1,9 +1,9 @@
-package algorithms.algorithms;
+package algorithms.algorithms.basic;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class LargestMissingNumber {
+public class Set_LargestMissingNumber {
 
     public static int findLargestMissing(int[] nums) {
         if (nums == null || nums.length == 0) return 1;

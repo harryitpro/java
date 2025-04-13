@@ -1,9 +1,9 @@
-package algorithms.algorithms.encoding;
+package algorithms.algorithms.experienced;
 
 import java.util.List;
 import java.util.Stack;
 
-public class DecompressString {
+public class Stack_DecompressString {
 
     public static String decompress(String s) {
         Stack<Integer> countStack = new Stack<>();

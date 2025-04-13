@@ -1,4 +1,4 @@
-package algorithms.algorithms.encoding;
+package algorithms.algorithms.experienced;
 
 /**
  * RunLengthEncoding

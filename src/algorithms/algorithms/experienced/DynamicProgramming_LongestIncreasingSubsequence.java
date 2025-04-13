@@ -1,4 +1,4 @@
-package algorithms.algorithms.dynamicprogramming;
+package algorithms.algorithms.experienced;
 
 import java.util.Arrays;
 
@@ -27,7 +27,7 @@ import java.util.Arrays;
  * Tracking Maximum Length:
  * While computing dp[i], we keep track of the overall maximum length (maxLength) seen so far, as the LIS might not necessarily end at the last element.
  */
-public class LongestIncreasingSubsequence {
+public class DynamicProgramming_LongestIncreasingSubsequence {
     public int lengthOfLIS(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
@@ -55,7 +55,7 @@ public class LongestIncreasingSubsequence {
     }
 
     public static void main(String[] args) {
-        LongestIncreasingSubsequence solution = new LongestIncreasingSubsequence();
+        DynamicProgramming_LongestIncreasingSubsequence solution = new DynamicProgramming_LongestIncreasingSubsequence();
         int[] nums1 = {10, 9, 2, 5, 3, 7, 101, 18};
         System.out.println(solution.lengthOfLIS(nums1));  // Output: 4
 

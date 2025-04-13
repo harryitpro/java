@@ -1,4 +1,4 @@
-package algorithms.algorithms;
+package algorithms.algorithms.basic;
 
 /**
  * Binary search tree validator in java
@@ -31,7 +31,7 @@ package algorithms.algorithms;
  */
 
 
-public class IsBST {
+public class BinarySearchTree_IsBST {
     public boolean isValidBST(TreeNode root) {
         return validate(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
@@ -77,7 +77,7 @@ public class IsBST {
         leftChild.left = new TreeNode(2);
         leftChild.right = new TreeNode(8);
 
-        IsBST validator = new IsBST();
+        BinarySearchTree_IsBST validator = new BinarySearchTree_IsBST();
         System.out.println("is it valid: " + validator.isValidBST(root)); // Output: true
     }
 }

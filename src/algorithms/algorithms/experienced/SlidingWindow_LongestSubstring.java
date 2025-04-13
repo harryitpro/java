@@ -1,6 +1,6 @@
-package algorithms.algorithms.slidingwindow;
+package algorithms.algorithms.experienced;
 
-public class LongestSubstring {
+public class SlidingWindow_LongestSubstring {
 /**
  * longest substring
  * Longest Substring Without Repeating Characters – A common coding problem that involves finding the length of the longest substring without repeating characters in a given string.

@@ -1,4 +1,4 @@
-package algorithms.algorithms;
+package algorithms.algorithms.basic;
 
 /**
  * Given a linked list, determine whether it contains a cycle (i.e., a node's next pointer eventually points back to a previous node).
@@ -19,7 +19,7 @@ import algorithms.datasturctures.Node;
  * If fast reaches null, there is no cycle.
  */
 
-public class IsNoCycleLinkedList {
+public class LinkedList_IsNoCycleLinkedList {
     public static boolean hasCycle(Node head) {
         if (head == null || head.next == null) {
             return false;

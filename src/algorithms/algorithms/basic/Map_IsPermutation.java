@@ -1,6 +1,6 @@
 package algorithms.algorithms.basic;
 
-public class IsPermutation {
+public class Map_IsPermutation {
     //a permutation means 2 words should have the same character set and frequency
     //linear time
     public static boolean isPermutation(String s1, String s2) {

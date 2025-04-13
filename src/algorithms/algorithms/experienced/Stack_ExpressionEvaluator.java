@@ -1,4 +1,4 @@
-package algorithms.algorithms.nestevaluation;
+package algorithms.algorithms.experienced;
 
 /**
  * * For expression evaluation; such as 3*(4+5)
@@ -6,7 +6,7 @@ package algorithms.algorithms.nestevaluation;
 
 import java.util.Stack;
 
-public class ExpressionEvaluator {
+public class Stack_ExpressionEvaluator {
 
     // Method to evaluate infix expressions using stacks
     public static int evaluateExpression(String expression) {

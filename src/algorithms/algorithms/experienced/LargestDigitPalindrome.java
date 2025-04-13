@@ -1,4 +1,4 @@
-package algorithms.algorithms;
+package algorithms.algorithms.experienced;
 
 import java.util.*;
 

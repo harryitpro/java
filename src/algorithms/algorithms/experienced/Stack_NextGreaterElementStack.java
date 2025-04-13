@@ -1,9 +1,23 @@
-package algorithms.algorithms;
+package algorithms.algorithms.experienced;
 
 import java.util.Arrays;
 import java.util.Stack;
 
-public class NextGreaterElementStack {
+/**
+ * The Next Greater Element (NGE) problem is a super popular stack-based interview question
+ * Problem Statement
+ * Given an array arr[] of integers, for each element, find the next greater element to its right.
+ * If there is no greater element, return -1 for that index.
+ */
+public class Stack_NextGreaterElementStack {
+    /**
+     * Efficient Approach: Using Stack (O(n) time)
+     * Traverse the array from right to left
+     *
+     * Use a monotonic stack (decreasing) to keep track of potential NGEs
+     *
+     * For each element, pop smaller elements, then peek the next greater one
+     */
     public static int[] nextGreaterElement(int[] arr) {
         int n = arr.length;
         int[] result = new int[n];
