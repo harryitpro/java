@@ -1,7 +1,15 @@
 package basic.recursiveprogramming;
 
-//recursive: a method call chain, unwind when the returning condition is met
+/**
+ *  *  a method call chain with smaller scope of input
+ *  *  unwind till the certain returning condition is met
+ */
 public class SumRange {
+    /**
+     * a recursive method.
+     * each call will make a smaller scope by increasing from by from++
+     * returning condition: from == to
+     */
     static int sumRange(int from, int to) {
         if (to == from)
             return to;
