@@ -2,6 +2,15 @@ package algorithms.algorithms.basic;
 
 import java.util.Arrays;
 
+/**
+ * task: remove duplicated character from array.
+ {1, 2, 2, 2, 3, 4, 5, 5, 5},  // [1, 2, 3, 4, 5, -1, -1, -1, -1]
+ {},                             // []
+ {1},                            // [1]
+ {1, 1, 1},                      // [1, -1, -1]
+ {1, 2, 3, 4}                    // [1, 2, 3, 4]
+ */
+
 public class Array_Deduplicator {
     public static int distinctArrayInPlace(int[] arr) {
         // Handle edge cases

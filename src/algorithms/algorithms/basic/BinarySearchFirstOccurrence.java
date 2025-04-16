@@ -1,4 +1,4 @@
-package algorithms.algorithms.experienced;
+package algorithms.algorithms.basic;
 
 /**
  * given a sorted array of integers and a key value, return the first index of searching result, and -1 if not found

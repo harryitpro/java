@@ -7,9 +7,11 @@ import java.util.Set;
  * Given a string s, find the length of the longest substring without repeating characters.
  * for example: input: "abcabcbb". output: 3.   ("abc")
  */
-public class LongestContiguousSubstringWithoutRepeating {
+public class SlidingWindow_LongestContiguousSubstringWithoutRepeating {
     /**
      * Hint:
+     * SlidingWindow Solution:
+     *
      * maintain a dynamic record of maxLength variable.
      * use Set<Character> to track duplicate;
      * maintain a Sliding Window:

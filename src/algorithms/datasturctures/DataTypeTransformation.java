@@ -24,6 +24,10 @@ public class DataTypeTransformation {
     }
 
     Map<String, Integer> stringFreq = new HashMap<>();
-    List<Map.Entry<String, Integer>> entris = new ArrayList<>(stringFreq.entrySet());
+    List<Map.Entry<String, Integer>> entries = new ArrayList<>(stringFreq.entrySet());
     List<Map.Entry<String, Integer>> linkedList = new LinkedList<>(stringFreq.entrySet());
+
+    /**
+     * convert to Sting
+     */
 }

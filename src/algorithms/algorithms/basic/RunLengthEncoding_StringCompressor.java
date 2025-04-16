@@ -1,10 +1,10 @@
-package algorithms.algorithms.experienced;
+package algorithms.algorithms.basic;
 
 /**
  * RunLengthEncoding
  * Run-Length Encoding (RLE) is a simple compression algorithm that replaces consecutive repeated characters (or values) with a single character and its count.
  */
-public class StringCompressor {
+public class RunLengthEncoding_StringCompressor {
     static String solution(String s) {
         StringBuilder compressed = new StringBuilder();
         for (int i = 0; i < s.length(); ) {
@@ -56,7 +56,7 @@ public class StringCompressor {
     }
 
     public static void main(String[] args) {
-        StringCompressor compressor = new StringCompressor();
+        RunLengthEncoding_StringCompressor compressor = new RunLengthEncoding_StringCompressor();
         String[] testCases = {
                 "aaabbbbbccd",  // a3b5c2d1
                 "a",            // a1
