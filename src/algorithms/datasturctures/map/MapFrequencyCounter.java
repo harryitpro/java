@@ -48,6 +48,8 @@ public class MapFrequencyCounter {
         return sortedMap;
     }
 
+
+
     public static void main(String[] args) {
         String s = "unique_string";
         Map<Character, Integer> charFreq = toFreqMap(s.toCharArray());
