@@ -9,6 +9,10 @@ record Transaction(String accountId, double amount, String type) {
 }
 
 public class PredicateExample {
+    public static List<Integer> filterIntersByRule(List<Integer> integers, Predicate<Integer> predicate) {
+        return integers.stream().filter(predicate).collect(Collectors.toUnmodifiableList());
+    }
+
 
     public static void main(String[] args) {
         List<Transaction> transactions = Arrays.asList(
