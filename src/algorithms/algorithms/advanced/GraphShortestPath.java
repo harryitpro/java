@@ -1,4 +1,4 @@
-package algorithms.algorithms.basic;
+package algorithms.algorithms.advanced;
 
 import java.util.*;
 

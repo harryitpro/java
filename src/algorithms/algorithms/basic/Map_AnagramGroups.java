@@ -9,10 +9,10 @@ import java.util.*;
 public class Map_AnagramGroups {
     static Set<Map<Character, Integer>> findAnagramsToSet(String[] words) {
         Set<Map<Character, Integer>> groupSet = new HashSet<>();
-        for (String s : words) {
+        for (String word : words) {
             Map<Character, Integer> charFreq = new HashMap<>();
-            for (char c : s.toCharArray()) {
-                charFreq.put(c, charFreq.getOrDefault(c, 0) + 1);
+            for (char c : word.toCharArray()) {
+                charFreq.compute(c, (key, value) -> (value == null) ? 1 : value + 1);
             }
             groupSet.add(charFreq);
         }
@@ -21,14 +21,11 @@ public class Map_AnagramGroups {
 
     public static Map<String, List<String>> findAnagrams(String[] words) {
         Map<String, List<String>> anagramMap = new HashMap<>();
-
         for (String word : words) {
             char[] chars = word.toCharArray();
             Arrays.sort(chars); // Sort characters
             String sortedWord = new String(chars); // Convert back to string
-
-            // Add to HashMap
-            anagramMap.computeIfAbsent(sortedWord, k -> new ArrayList<>()).add(word);
+            anagramMap.computeIfAbsent(sortedWord, (String key) -> new ArrayList<>()).add(word);
         }
         return anagramMap;
     }

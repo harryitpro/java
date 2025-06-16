@@ -18,23 +18,4 @@ public class IsSubstring {
         }
         return false;
     }
-
-    public static void main(String[] args) {
-        // Test cases
-        String[][] tests = {
-                {"a", "a"},
-                {"abcabc", "cab"},
-                {"hellohello", "llohe"},
-                {"water", "terwa"},
-                {"abcabc", "def"},
-                {"", ""}
-        };
-
-        for (String[] test : tests) {
-            String str1 = test[0];
-            String str2 = test[1];
-            System.out.println("Is \"" + str2 + "\" a substring  of \"" + str1 + "\"? " +
-                    isSubstring(str1, str2));
-        }
-    }
 }
